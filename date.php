@@ -15,43 +15,70 @@ if (have_posts()) {
 }
 }
 else { 
-  get_header();
-  ?>
-       <?php
-  $ye = mysql2date('Y', $wp_query->posts[0]->post_date);
-  $mo = mysql2date('m', $wp_query->posts[0]->post_date);
-  $da = mysql2date('d', $wp_query->posts[0]->post_date);
-  if (is_year()) {
-    $previous_link = get_year_link($ye - 1);
-    $previous_text = '&laquo; ' . ($ye - 1);
-    $next_link = get_year_link($ye + 1);
-    $next_text = ($ye + 1) . ' &raquo;';
-    $title = $ye;
-  } elseif (is_month()) {
-    $previous_link = get_month_link($ye, $mo - 1);
-    $previous_text = '&laquo; ' . date('F Y', mktime(0, 0, 0, $mo - 1, 1, $ye));
-    $next_link = get_month_link($ye, $mo + 1);
-    $next_text = date('F Y', mktime(0, 0, 0, $mo + 1, 1, $ye)) . ' &raquo;';
-    $title = date('F Y', mktime(0, 0, 0, $mo, 1, $ye));
-  } elseif (is_day()) {
-    $previous_link = get_month_link($ye, $mo, $da - 1);
-    $previous_text = '&laquo; ' . date('F j, Y', mktime(0, 0, 0, $mo, $da - 1, $ye));
-    $next_link = get_day_link($ye, $mo, $da + 1);
-    $next_text = date('F j, Y', mktime(0, 0, 0, $mo, $da + 1, $ye)) . ' &raquo;';
-    $title = date('F j, Y', mktime(0, 0, 0, $mo, $da, $ye));
-  }
-  ?>
-<?php
-                   $posts = query_posts($query_string . '&orderby=date&order=desc&posts_per_page=-1')
-                   ;
-?>
+  get_header(); ?>
 <div id="container">
-    <div class="navigation">
-<div class="left"><a href="<?php print $previous_link ?>"><?php print $previous_text ?></a></div>
-<div class="right"><a href="<?php print $next_link ?>"><?php print $next_text ?></a></div>
-                           </div>
-   <div style="clear: both"></div>
-   <h1><?php print $title ?></h1>
+<?php 
+  $y = mysql2date('Y', $wp_query->posts[0]->post_date);
+  $m = mysql2date('m', $wp_query->posts[0]->post_date);
+  $d = mysql2date('d', $wp_query->posts[0]->post_date);
+  $posts = query_posts($query_string . '&orderby=date&order=desc&posts_per_page=-1'); 
+   
+  $display = mktime(0, 0, 0, $m, $d, $y);
+  if (is_year()) {
+    $format = 'Y';
+    $prev_display = mktime(23, 59, 59, 12, 31, $y - 1);
+    $next_display = mktime(0, 0, 0, 1, 1, $y + 1);
+    $url_format = 'Y';
+  } elseif (is_month()) {
+    $prev_display = mktime(23, 59, 59, $m, 0, $y);
+    $next_display = mktime(0, 0, 0, $m + 1, 1, $y);
+    $format = 'F Y';
+    $url_format = 'Y/M';
+  } elseif (is_day()) {
+    $prev_display = mktime(23, 59, 59, $m, $d - 1, $y);
+    $next_display = mktime(0, 0, 0, $m, $d + 1, $y);
+    $format = 'F j, Y';
+    $url_format = 'Y/M/j';
+  }
+  $paged = get_query_var('paged');
+  if ($paged < 2) { // No previous pages; navigate by date instead
+    $past = $wpdb->get_row("SELECT UNIX_TIMESTAMP(MAX(post_date)) AS post_date
+FROM $tableposts WHERE post_date <= FROM_UNIXTIME($prev_display) AND post_status='publish'");
+    if ($past->post_date) {
+      $prev_text = '&laquo; ' . date($format, $past->post_date);
+      $prev_link = get_bloginfo('url') . '/'
+        . date($url_format, $past->post_date);
+    }
+  }
+  if ($paged >= $wp_query->max_num_pages) { // No next pages
+    $future = $wpdb->get_row("SELECT UNIX_TIMESTAMP(MIN(post_date)) AS post_date
+FROM $tableposts WHERE post_date >= FROM_UNIXTIME($next_display) AND post_status='publish'");
+    if ($future->post_date) {
+      $next_text = date($format, $future->post_date) . ' &raquo;';
+      $next_link = get_bloginfo('url') . '/'
+        . date($url_format, $future->post_date);
+    }
+  }
+  $title = date($format, $display);
+  ?>
+  <div class="navigation">
+    <div class="left">
+      <?php if ($prev_text) { ?>
+        <a href="<?php print $prev_link ?>"><?php print $prev_text ?></a>
+      <?php } else { ?>
+        <?php previous_posts_link('&laquo; Older posts'); ?>
+      <?php } ?>
+    </div>
+    <div class="right">
+      <?php if ($next_text) { ?>
+        <a href="<?php print $next_link ?>"><?php print $next_text ?></a>
+      <?php } else { ?>
+        <?php next_posts_link('Newer posts &raquo;'); ?>
+      <?php } ?>
+    </div>
+    <div style="clear: both"></div>
+  </div>
+  <h1><?php print $title ?></h1>
 <?php if (is_day()) {
 	$year = $wp_query->query_vars['year'];
 	$month = $wp_query->query_vars['monthnum'];
@@ -80,13 +107,24 @@ else {
 		</div>
 
 	<?php endif; ?>
-    <div class="navigation">
-<div class="left"><a href="<?php print $previous_link ?>"><?php print $previous_text ?></a></div>
-<div class="right"><a href="<?php print $next_link ?>"><?php print $next_text ?></a></div>
-                           </div>
-   <div style="clear: both"></div>
-
-</div>
+  <div class="navigation">
+    <div class="left">
+      <?php if ($prev_text) { ?>
+        <a href="<?php print $prev_link ?>"><?php print $prev_text ?></a>
+      <?php } else { ?>
+        <?php previous_posts_link('&laquo; Older posts'); ?>
+      <?php } ?>
+    </div>
+    <div class="right">
+      <?php if ($next_text) { ?>
+        <a href="<?php print $next_link ?>"><?php print $next_text ?></a>
+      <?php } else { ?>
+        <?php next_posts_link('Newer posts &raquo;'); ?>
+      <?php } ?>
+    </div>
+    <div style="clear: both"></div>
+  </div>
+        </div>
 <?php if (!$_GET['bulk']) {
 ?>
 

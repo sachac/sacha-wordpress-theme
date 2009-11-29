@@ -1,10 +1,9 @@
 /*  
-Theme Name: NetWorker
-Theme URI: http://www.antbag.com
-Description: An adsense ready theme from Antbag.com.
+Theme Name SachaNew:
+Theme URI: http://www.sachachua.com
+Description: A new theme 
 Version: 1.0
-Author: Anthony Baggett
-Author URI: http://www.antbag.com/
+Author: Sacha Chua
 
 */
 
@@ -104,8 +103,7 @@ blockquote {
 }
 
 code { 
-	color: #9A2EFE; 
-	font-family: Courier, monospace; 
+	font-family: Courier, monospace;
 }
 
 .entry p { 
@@ -644,3 +642,34 @@ li { margin-bottom: 0.5em }
 
 .subscribe_text { background-image: url(images/subscribe.png); background-repeat: no-repeat; height: 20px; margin-bottom: 5px; }
 img#wpstats { visibility: hidden; height: 0px }
+.code { background: black;         color: #d8bfd8; }
+.comment {
+                        /* font-lock-comment-face */
+                        color: #ff7f24;
+                              }
+                  .comment-delimiter {
+                              /* font-lock-comment-delimiter-face */
+                              color: #ff7f24;
+                                    }
+                        .constant {
+                                    /* font-lock-constant-face */
+                                    color: #7fffd4;
+                                          }
+                              .default {
+                                          /* default */
+                                          color: #d8bfd8;
+                                                  background-color: #000000;
+                                                        }
+                                    .keyword {
+                                                /* font-lock-keyword-face */
+                                                color: #00ffff;
+                                                      }
+                                          .string {
+                                                      /* font-lock-string-face */
+                                                      color: #ffa07a;
+                                                            }
+                                                .variable-name {
+                                                            /* font-lock-variable-name-face */
+                                                            color: #eedd82;
+                                                                  }
+                                                
