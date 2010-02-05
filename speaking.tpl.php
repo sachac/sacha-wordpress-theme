@@ -2,11 +2,9 @@
 /*
 Template Name: Speaking
 */
-?>
-<?php get_header(); ?>
-
-<div id="container">
-<h3>Topics</h3>
+get_header(); ?>
+<div class="hfeed grid_9">
+<h3>Speaking Topics</h3>
 
 People often ask me to share what I've learned about:
 
@@ -52,13 +50,11 @@ The first time I met Sacha she was addressing a huge audience and she captured e
 </ul>
 <a href="http://sachachua.com/wp/category/presentation">More posts about public speaking</a>
 
-	</div>
-<div style="float: left">
-<div style="margin: auto; width: 357px;"><object style="margin: 0px;" height="542" width="355"><param name="movie" value="http://static.slideshare.net.s3.amazonaws.com/swf/egowidget2PT.swf"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><font><embed src="http://static.slideshare.net.s3.amazonaws.com/swf/egowidget2PT.swf" flashvars="feedurl=user/sachac&amp;widgettitle=Recent Presentations" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" height="542" width="355"></font></object><font><br></font><div style="font-size: 11px; font-family: tahoma,arial; height: 26px; padding-top: 2px; text-align: left;"><font><a href="http://www.slideshare.net/?src=egowidget"><img src="http://static.slideshare.net/swf/logo_embd.png" style="border: 0px none ; margin-bottom: -5px;" alt="SlideShare"></a> | <a href="http://www.slideshare.net/widgets/presentation-pack" title="Get your Presentation Pack">Get your Presentation Pack</a></font></div></div>
+</div>
+<div class="grid_7" style="text-align: right">
+<object style="margin: 0px;" height="542" width="355"><param name="movie" value="http://static.slideshare.net.s3.amazonaws.com/swf/egowidget2PT.swf"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://static.slideshare.net.s3.amazonaws.com/swf/egowidget2PT.swf" flashvars="feedurl=user/sachac&amp;widgettitle=Recent Presentations" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" height="542" width="355"></object><div style="font-size: 11px; font-family: tahoma,arial; height: 26px; padding-top: 2px;"><a href="http://www.slideshare.net/?src=egowidget"><img src="http://static.slideshare.net/swf/logo_embd.png" style="border: 0px none ; margin-bottom: -5px;" alt="SlideShare"></a> | <a href="http://www.slideshare.net/widgets/presentation-pack" title="Get your Presentation Pack">Get your Presentation Pack</a></div></div>
+</div>
+
 </div>
 <?php get_footer() ?>
-<style type="text/css">
-#container { width: 500px; }
-</style>
-</div></body>
-</html>
+

@@ -65,9 +65,6 @@ $oddcomment = 'alt';
 	<?php endif; ?>
 
 <?php endif; ?>
-<div class="friendfeed">
-<?php wp_ffcomments(); ?>
-</div>
 
 <div id="comment-form">
 
@@ -79,7 +76,7 @@ $oddcomment = 'alt';
 <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>">logged in</a> to post a comment.</p>
 
 <?php else : ?>
-
+Please comment as you, not your organization.
 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 <?php if ( $user_ID ) : ?>
 

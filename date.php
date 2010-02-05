@@ -16,6 +16,7 @@ if (have_posts()) {
 }
 else { 
   get_header(); ?>
+<div class="grid_10 content push_2">
 <div id="container">
 <?php 
   $y = mysql2date('Y', $wp_query->posts[0]->post_date);
@@ -33,12 +34,12 @@ else {
     $prev_display = mktime(23, 59, 59, $m, 0, $y);
     $next_display = mktime(0, 0, 0, $m + 1, 1, $y);
     $format = 'F Y';
-    $url_format = 'Y/M';
+    $url_format = 'Y/n';
   } elseif (is_day()) {
     $prev_display = mktime(23, 59, 59, $m, $d - 1, $y);
     $next_display = mktime(0, 0, 0, $m, $d + 1, $y);
     $format = 'F j, Y';
-    $url_format = 'Y/M/j';
+    $url_format = 'Y/n/j';
   }
   $paged = get_query_var('paged');
   if ($paged < 2) { // No previous pages; navigate by date instead
@@ -97,7 +98,6 @@ FROM $tableposts WHERE post_date >= FROM_UNIXTIME($next_display) AND post_status
 		<div class="postnav">
 			<?php posts_nav_link(); ?>
 		</div>
-
 	<?php else: ?>
 
 		<div class="post" id="post-<?php the_ID(); ?>">

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<div class="grid_10 content push_2">
 <div id="container">
 
 		<div class="navigation">
@@ -18,7 +18,9 @@
 			<div class="entry">
 
 				<?php the_content(); ?>
-<?php the_meta(); ?>
+
+<? if (function_exists('the_ratings')) {
+the_ratings(); } ?>
 
 
 <script src="http://feeds.feedburner.com/~s/sachac?i=<?php the_permalink() ?>" type="text/javascript" charset="utf-8"></script>

@@ -12,7 +12,8 @@
 				<?php the_content("[Read more &rarr;]"); ?>
 
 </div>
-<?php the_meta(); ?>
+<? if (function_exists('the_ratings')) { 
+the_ratings(); } ?> 
 <? if (function_exists('social_bookmark')) { social_bookmark(); } ?> 
 - <a class="share-via-twitter" href="http://twitter.com/home?status=Reading: <?php the_title(); ?> <?php echo get_option('home'); ?>/p/<?php the_ID(); ?>" title="Tweet this post">Twitter</a>
  

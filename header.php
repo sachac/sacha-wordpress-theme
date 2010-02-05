@@ -1,4 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
 
@@ -13,6 +12,7 @@
 	<!--[if lte IE 6]>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/ie6.css" media="screen" />
 	<![endif]-->
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/compressed/css/960_16_10_10.css" type="text/css" />
 	<link rel="alternate" type="application/rss+xml" title="Most items (excluding tidbits)" href="<?php bloginfo('rss2_url'); ?>?cat=-550" />
 	<link rel="alternate" type="application/rss+xml" title="Only weekly reviews" href="http://sachachua.com/wp/category/weekly/feed/" />
 	<link rel="alternate" type="application/rss+xml" title="Only Emacs posts" href="http://sachachua.com/wp/category/emacs/feed/" />
@@ -27,30 +27,31 @@
 </head>
 
 <body>
-<div id="header"><div class="title">
-<img src="http://sachachua.com/notebook/pics/sacha-20080111-48x72-lowres.jpg" align="left" vspace=20 hspace=20 alt="" />
-<img src="<?php bloginfo('stylesheet_directory'); ?>/images/face.png" alt="" height="72" align="right" vspace="20" />
-                                                        <h1><a href="<?php bloginfo('url'); ?>">sacha chua</a> :: living an awesome life</h1>
-<a href="http://sachachua.com/wp/about/">enterprise 2.0 consultant, storyteller, geek, and more</a>
-<br clear="left" />
-<div class="topmenu" style="border-top: 1pt dotted lightgray; border-bottom: 1pt dotted lightgray; padding-left: 20px;">
-		<a href="http://sachachua.com/wp">Home</a> - 
-<a href="http://sachachua.com/wp/about/">About</a> - 
-<a href="http://sachachua.com/wp/speaking">Speaking</a> - 
-<a href="http://sachachua.com/wp/archive-index/">Archives</a> - <a 
-href="http://sachachua.com/wp/contact-me">Contact me</a> - Search this site:
-<!-- Google Custom Search Element -->
-<div id="cse" style="width:100%;">Loading</div>
-<script type="text/javascript">
-  google.load('search', '1');
-  google.setOnLoadCallback(function(){
-    new google.search.CustomSearchControl().draw('cse');
-  }, true);
-</script>
+<div class="container_16">
+   <div class="grid_1"><img src="http://sachachua.com/notebook/pics/sacha-20080111-48x72-lowres.jpg" alt="" height="72" /></div>
+   <div class="grid_11" style="text-align: left">
+     <h1><a href="<?php bloginfo('url'); ?>">sacha chua</a> :: living an awesome life</h1>
+<ul class="links">
+<li><a href="http://sachachua.com/wp">Home</a></li>
+<li><a href="http://sachachua.com/wp/about/">About</a></li>
+<li><a href="http://sachachua.com/wp/speaking">Speaking</a></li>
+                                                        <li><a href="http://sachachua.com/wp/category/highlight">Best of...</a></li>
+                                                        <li><a href="http://sachachua.com/wp/category/yearly">Yearly</a></li>
+                                                        <li><a href="http://sachachua.com/wp/archive/">Archives</a></li>
+                                                        <li><a href="http://sachachua.com/wp/future">Future posts</a></li>
+<li><a href="http://sachachua.com/wp/contact">Contact</a></li></ul>
 </div>
-
-</div></div>
-
-<div id="wrapper" style="clear: both">
-
+   <div class="grid_1"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/face.png" height="72" alt=""/></div>   
+<div class="grid_3">
+<a href="http://feeds.feedburner.com/sachac"><img src="http://feeds.feedburner.com/~fc/sachac?bg=&amp;fg=&amp;anim=&amp;label=readers" height="26" width="88" style="border:0" alt="" /></a> <br />
+<a href="http://feeds.feedburner.com/sachac"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/subscribe.png" height="15" width="88" alt="Subscribe!" style="margin-bottom: 5px" border="0"/></a><br />
+   <a href="http://sachachua.com/wp/subscribe"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/email.png" height="20" alt="E-mail" border="0" /></a>
+   <a href="http://feeds.feedburner.com/sachac"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/rss-icon.png" height="20" alt="Feed reader" border="0" /></a>
+</div>
+<div class="clear"></div>
+<div class="grid_16" style="border-bottom: 1pt solid #CCCCCC; margin-bottom: 10px;"></div>
+<div class="clear"></div>
+<div class="grid_16" style="border-bottom: 1pt solid #CCCCCC; margin-bottom: 10px">
+</div>
+<div class="clear"></div>
 

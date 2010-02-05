@@ -6,28 +6,6 @@ Version: 1.0
 Author: Sacha Chua
 
 */
-
-/*
-  Friendfeed
-  */
-.friendfeedcomments { border:1px solid #CCCCCC; margin:10px 0pt; padding:10px 10px 10px 10px; }
-.friendfeedcommentslink { font-size: 11px; line-height:1.5em; }
-.togglefriendfeedcommentslink { color: #333; font-size: 10px; font-weight: bold; }
-.friendfeedicon { float: left; border: none; padding: 0 4px 0 0; }
-.friendfeedcomments ul, .friendfeedcomments ul li { padding: 0px; list-style-type: none; }
-.friendfeedlikeslist ul, .friendfeedlikeslist ul li { display: inline; }
-.friendfeedlikeslist ul li { margin: 0px; }
-.friendfeeddiscussions { margin: 0px; clear: left; }
-.friendfeedcomments ul li.friendfeedcomment { margin: 5px 0 5px 0; border-top: #CCC 1px dotted;  padding: 5px 0 0 0; }
-li.friendfeedcomment a.profileImage img { float:left; margin: 0 5px 5px 0px; }
-li.friendfeedcomment .clearer { clear:left; }
-.friendfeedpermalink { margin: 0 0 10px 0; font-size: 11px; text-align: right; }
-.ff_commentsform h3 { padding: 0px; margin: 10px 0 0 0; }
-.ff_newcomment { width: 30em; }
-.ff_commentsform label { display:block; float:left; width:80px; }
-.ff_submitcomment { clear: left; margin:10px 0pt 0pt; }
-/* End friendfeed */
-
 /* RECAPTCHA STYLING */
 .recaptcha-error {
    font-size: 1.8em;
@@ -41,10 +19,10 @@ body, h1, h2, h3, h4, h5, h6, blockquote, p, form{
 }
 
 body{
-	margin: 0;
+	margin-top: 20px;
 	font-family: Calibri, Verdana, Georgia, Trebuchet MS, Verdana, Arial, Sans-Serif;
-	font-size: 13px;
-	text-align: center;
+	font-size: 15px;
+	text-align: left;
 	vertical-align: top;
 	background: #FFF;
 	color: #333;
@@ -60,7 +38,6 @@ body{
 
 h1{
 	font-size: 34px;
-	padding: 15px 0 10px 15px;
 }
 
 h3{
@@ -95,7 +72,6 @@ a img {
 *******************/
 
 blockquote { 
-	font-style: italic; 
 	font-size: 90%;
 	color: #333; 
 	margin: 1.5em 30px 1.5em 30px; 
@@ -302,16 +278,6 @@ code {
 ---------Post-------
 *******************/
 
-#container{
-	float: left;
-	width: 600px;
-	padding: 0 0 0 0;
-}
-
-.post{
-	padding: 20px 20px 40px 30px;
-}
-
 .post h2{
 	text-transform: normal;
 	font-size: 22px;
@@ -331,9 +297,6 @@ pre { overflow: auto }
 	padding: 2px 0 20px 0;
 }
 
-.postinfo a{
-	color: #aaa;
-}
 
 .postdate{ color: #aaa; }
 
@@ -375,35 +338,17 @@ h2.archive_head{
 ----Sidebar Styles---
 ********************/
 
-.rightbar{
-	float: left;
-	width: 360px;
-	margin: 0;
-	padding-top: 35px;
-	padding-bottom: 15px;
-	display: inline;
-	overflow: hidden;
-	border-left: 1px dotted #CCC;
-}
-
 .rightbar ul{
 	list-style: none;
 	margin: 0;
-	padding: 0 10px 0 10px;
+	padding: 0px;
 }
 
-.rightbar ul li{
-	padding: 10px 0 10px 5px;
-}
+
 
 .rightbar ul li h2{
-	font-family: Georgia, Sans-serif;
 	font-size: 16px;
-	font-weight: normal;
-	text-transform: uppercase;
 	color: #555;
-	padding: 5px 5px 5px 20px;
-	margin: 0 10px 10px 0;
 	border-bottom: 1px solid #CCC;
 }
 
@@ -448,43 +393,22 @@ table#wp-calendar{
 
 /* Left Sidebar */
 
-.leftbar{
-	float: left;
-	width: 190px;
-	margin: 0;
-	padding-top: 30px;
-	padding-bottom: 15px;
-	display: inline;
-	overflow: hidden;
-}
-
 .leftbar ul{
 	list-style: none;
 	margin: 0;
-	padding: 0 5px 0 10px;
+padding: 0;
 }
 
-.leftbar ul li{
-	padding: 10px 0 10px 5px;
-}
 
 .leftbar ul li h2{
-	font-family: Georgia, Sans-serif;
 	font-size: 16px;
-	font-weight: normal;
-	text-transform: uppercase;
 	color: #555;
-	padding: 5px 5px 5px 20px;
-	margin: 0 10px 10px 0;
 	border-bottom: 1px solid #CCC;
 }
 
 .leftbar ul ul li{
-	padding: 2px 0;
-	margin: 0 3px 0 10px;
 	line-height: 18px;
 	font-size: 11px;
-	border-bottom: 1px dotted #CCC;
 }
 .leftbar a:link, a:visited{
 	text-decoration: none;
@@ -578,20 +502,6 @@ table#wp-calendar{
 -------Footer-------
 *******************/
 
-#footer{
-	clear: both;
-	float: left;
-	width: 885px;
-	margin: 0;
-	padding: 10px 5px 5px 10px;
-	line-height: 18px;
-	font-size: 80%;
-	color: black;
-	background: #FFF;
-	border-top: 1px dotted #CCC;
-	border-bottom: none;
-}
-
 #footer a:link{
 	text-decoration: none;
 	color: #369;
@@ -630,10 +540,8 @@ P { margin-bottom: 1em; }
 
 .rightbar ul ul li.recentcomments { margin-bottom: 1em;  }
 
-div.friendfeed, li div.friendfeed.badge { padding-left: 0px; width: 300px }
-li#widgetize-anything-1 { width: 300px }
-table#wp-calendar { width: 300px }
-#mybloglog-reader-roll #MBL_COMM { width: 300px }
+div.friendfeed, li div.friendfeed.badge { padding-left: 0px; width: 220px }
+
 
 li { margin-bottom: 0.5em }
 .navigation { font-weight: bold; font-size: larger }
@@ -673,3 +581,36 @@ img#wpstats { visibility: hidden; height: 0px }
                                                             color: #eedd82;
                                                                   }
                                                 
+
+.links { padding-left: 0px; margin-top: 0px; }
+.links li { display: inline; margin-right: 10px; }
+.container_16 { text-align: left; } 
+.leftbar ul.featured_categories li { height: 100px; width: 100px; padding: 0px; margin: 0px; }
+.leftbar ul.featured_categories { margin: 0; padding: 0; }
+.featured_categories li a { display: block; text-indent: -9999px; height: 100px; width: 100px }
+.cat_work { background: transparent url(images/categories.png) 0px 0px no-repeat; }
+.cat_geek { background: transparent url(images/categories.png) 0px -200px no-repeat; }
+.cat_life { background: transparent url(images/categories.png) 0px -100px no-repeat; }
+.cat_sketches { background: transparent url(images/categories.png) 0px -300px no-repeat; }
+.cat_speaking { background: transparent url(images/categories.png) 0px -400px no-repeat; }
+.cat_connecting { background: transparent url(images/categories.png) 0px -500px no-repeat; }
+.cat_outsourcing { background: transparent url(images/categories.png) 0px -600px no-repeat; }
+.cat_emacs { background: transparent url(images/categories.png) 0px -700px no-repeat; }
+.cat_drupal { background: transparent url(images/categories.png) 0px -800px no-repeat; }
+.cat_weekly { background: transparent url(images/categories.png) 0px -900px no-repeat; }
+body { margin-top: 40px; }
+.footer {
+	border-top: 1px dotted #CCC;
+	border-bottom: none;
+margin-top: 20px;
+}
+body .cse input.gsc-search-button, body input.gsc-search-button { height: 18px; width: 16px; background: transparent url(images/search.png) no-repeat center top;
+cursor: pointer; cursor: hand; text-indent: -1000em; border: 0px; overflow: hidden; display: block; margin: 0px; padding: 0px }
+body td.gsc-search-button { width: 16px; padding-left: 5px;}
+.post, .post h2 { text-align: left; }
+.sketch_thumbnail li { list-style-type: none; margin: 0px; padding: 0px; width: 60px; display: inline }
+
+.future td.date { color: darkgray }
+.future td.future_title { margin-left: 10px; margin-right: 10px; }
+td { vertical-align: top }
+th { text-align: left }

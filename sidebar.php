@@ -1,32 +1,48 @@
-<!-- Start leftbar -->
-
-<!-- Start Rightbar -->
-
-<div class="rightbar">
+</div><!-- end of content area -->
+<div class="grid_2 pull_10 leftbar">
    <ul>
-   <li class="widget">
-<a href="http://feeds.feedburner.com/sachac"><img src="http://feeds.feedburner.com/~fc/sachac?bg=&amp;fg=&amp;anim=&amp;label=readers" height="26" width="88" style="border:0" alt="" /></a> 
-<img src="<?php bloginfo('stylesheet_directory'); ?>/images/subscribe.png" height="20" alt="Subscribe! " style="margin-left: 10px; margin-right: 5px"/>
-   <a href="http://sachachua.com/wp/subscribe"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/email.png" height="20" style="margin-left: 5px; margin-right: 5px" alt="E-mail" border="0" /></a>
-   <a href="http://feeds.feedburner.com/sachac"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/rss-icon.png" height="20" alt="Feed reader" border="0" /></a>
-
-
-   </li>
 <li class="widget">
 <h2 class="widgettitle">Featured Categories</h2>
-<ul>
-   <li><a href="http://sachachua.com/wp/category/work">Work</a></li>
-   <li><a href="http://sachachua.com/wp/category/life">Life</a></li>
-   <li><a href="http://sachachua.com/wp/category/sketches">Sketches</a></li>
-   <li><a href="http://sachachua.com/wp/category/va">Delegating</a></li>
-   <li><a href="http://sachachua.com/wp/category/presentation">Presenting</a></li>
-   <li><a href="http://sachachua.com/wp/category/networking">Social networking</a></li>
-   <li><a href="http://sachachua.com/wp/category/web2.0">Web 2.0</a></li>
-   <li><a href="http://sachachua.com/wp/category/emacs">Emacs</a></li>
-   <li><a href="http://sachachua.com/wp/category/drupal">Drupal</a></li>
-   <li><a href="http://sachachua.com/wp/category/book">Books I'm reading</a></li>
-<li><a href="http://sachachua.com/wp/category/weekly">Weekly reports</a></li>
+<ul class="featured_categories">
+   <li class="cat_work"><a href="http://sachachua.com/wp/category/work"><span>Work</span></a></li>
+   <li class="cat_geek"><a href="http://sachachua.com/wp/category/geek"><span>Geek</span></a></li>
+   <li class="cat_life"><a href="http://sachachua.com/wp/category/life"><span>Life</span></a></li>
+   <li class="cat_sketches"><a href="http://sachachua.com/wp/category/sketches"><span>Sketches</span></a></li>
+   <li class="cat_outsourcing"><a href="http://sachachua.com/wp/category/va"><span>Outsourcing</span></a></li>
+   <li class="cat_speaking"><a href="http://sachachua.com/wp/category/presentation"><span>Presenting</span></a></li>
+   <li class="cat_connecting"><a href="http://sachachua.com/wp/category/networking"><span>Social networking</span></a></li>
+   <li class="cat_emacs"><a href="http://sachachua.com/wp/category/emacs"><span>Emacs</span></a></li>
+   <li class="cat_drupal"><a href="http://sachachua.com/wp/category/drupal"><span>Drupal</span></a></li>
+   <li class="cat_weekly"><a href="http://sachachua.com/wp/category/weekly"><span>Weekly reports</span></a></li>
 </ul></li>
+
+
+
+
+	<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar(1))
+    ; ?>
+</div>
+<div class="grid_4 rightbar">
+<ul>
+    <li><?php include('searchform.php'); ?></li>
+    <li><a href="http://sachachua.com/wp/2009/12/what-can-i-help-you-learn-looking-for-mentees/">What can I help you learn?</a></li>
+<li><h2>Recent Sketches</h2>
+<ul class="sketch_thumbnail">
+<?php 
+query_posts('showposts=12&cat=433');
+$i = 0;
+while (have_posts() && $i < 4): the_post(); 
+$x = get_the_image(array('echo' => false, 'image_scan' => true,
+'custom_key' => array('Thumbnail', 'thumbnail'), 'default_size' => 'thumbnail', 'width' => 100, 'height' => 100));
+if ($x && strpos($x, 'zemanta') === FALSE) {
+  print '<li ' . (($i % 2 != 0) ? ' style="margin-left: 20px"' : '') . '>' . $x . '</li>';
+  $i++;
+ }
+endwhile;
+?>
+</ul>
+
+</li>
 <?php if (function_exists('clb_plus')) { clb_plus(); } ?>
 	<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar(2)) : else : ?>
 
@@ -57,6 +73,7 @@
 <?php endif; ?>
 
 </ul>
-	</div>
+
+</div><div class="clear"></div>
 
 <!-- End Sidebar -->
