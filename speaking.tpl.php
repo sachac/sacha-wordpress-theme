@@ -45,7 +45,7 @@ The first time I met Sacha she was addressing a huge audience and she captured e
 <ul>
 <?php query_posts('category_name=presentation&showposts=10'); ?>
 <?php while(have_posts()): the_post(); ?>
-<li><a href="<?php the_permalink(); ?> title="<?php the_title();?>"><?php the_title(); ?></a></li>
+<li><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title(); ?></a></li>
        	<?php endwhile; ?>
 </ul>
 <a href="http://sachachua.com/wp/category/presentation">More posts about public speaking</a>

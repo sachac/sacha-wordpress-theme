@@ -1,5 +1,5 @@
 /*  
-Theme Name SachaNew:
+Theme Name: Sacha Chua
 Theme URI: http://www.sachachua.com
 Description: A new theme 
 Version: 1.0
@@ -16,16 +16,21 @@ Author: Sacha Chua
 body, h1, h2, h3, h4, h5, h6, blockquote, p, form{
 	margin: 0;
 	padding: 0;
+        color: #500000;
 }
+
+h2 { margin-top: 0.83em; margin-bottom: 0.83em; }
+h1 { margin-top: 0.83em; margin-bottom: 0.83em; font-size: 35px }
+.header h1 { margin: 0; font-size: 35px  }
 
 body{
 	margin-top: 20px;
-	font-family: Calibri, Verdana, Georgia, Trebuchet MS, Verdana, Arial, Sans-Serif;
-	font-size: 15px;
+	font-family: Calibri, Trebuchet MS, Verdana, Arial, Sans-Serif;
+	font-size: 12pt;
 	text-align: left;
+        
 	vertical-align: top;
 	background: #FFF;
-	color: #333;
 }
 
 #wrapper{
@@ -37,16 +42,14 @@ body{
 }
 
 h1{
-	font-size: 34px;
+        text-shadow: #bbb 1px 1px 1px;
+        
 }
 
 h3{
-	padding: 15px 0 15px 0;
+	padding: 25px 0 5px 0;
 }
 
-h4{
-	padding: 0 0 0 15px;
-}
 
 a:link{
 	text-decoration: none;
@@ -73,7 +76,7 @@ a img {
 
 blockquote { 
 	font-size: 90%;
-	color: #333; 
+	color: #633; 
 	margin: 1.5em 30px 1.5em 30px; 
 	padding: 4px 4px 4px 10px;
 }
@@ -82,10 +85,12 @@ code {
 	font-family: Courier, monospace;
 }
 
-.entry p { 
-	margin: 0 0 15px 0; 
+textarea#comment {
+	width: 545px;
 }
-
+#comment-preview {
+        width: 535px; 
+}
 .bg {
 	padding-top: 15px;
 	padding-bottom: 10px;
@@ -121,15 +126,12 @@ code {
 .entry li { 
 	margin: 0 0 5px 0; 
 }
-		
-.entry ul li ul, .entry ul li ol, .entry ol li ul, .entry ol li ol { 
-	margin: 5px 0 5px 30px; 
-}
 
+.entry ul, .entry ol { margin: 0px; }		
+.entry ul ul { margin-left: 10px; padding-left: 10px; }
 .entry blockquote.right { 
 	width: 150px; 
 	font-style: normal !important; 
-	font-size: 14px;
 	color: #777;
 	margin: 0.3em 0 0.3em 15px !important; 
 	padding: 5px;
@@ -144,7 +146,6 @@ code {
 .entry blockquote.left { 
 	width: 150px; 
 	font-style: normal !important; 
-	font-size: 14px;
 	color: #777;
 	margin: 0.3em 15px 0.3em 0 !important; 
 	padding: 5px;
@@ -201,7 +202,6 @@ code {
 .archive_head { 
 	text-align: center;
 	font-style: normal; 
-	font-size: 13px;
 	color: #900; 
 	margin: 25px auto 10px 30px;
 	border-top: 1px dotted #CCC;
@@ -252,7 +252,6 @@ code {
 	text-decoration: none;
 	padding: 5px 10px;
 	color: #900;
-	font-size: 16px;
 }
 
 #top-menu a:hover{
@@ -270,7 +269,6 @@ code {
 #top-menu ul li{
 	display: inline;
 	padding: 0;
-	font-size: 14px;
 }
 
 
@@ -280,31 +278,24 @@ code {
 
 .post h2{
 	text-transform: normal;
-	font-size: 22px;
 	padding: 20px 0 0 0;
+        text-shadow: #bbb 1px 1px 1px;
 }
 
-.entry{
-	line-height: 22px;
-}
-
-pre { overflow: auto }
-.entry { overflow: auto }
+pre { overflow: auto; width: 90%; padding: 5px 5px 5px 5px; -webkit-box-shadow: #aaa 1px 1px 2px; border: 1px solid #aaa }
 
 .postinfo{
-	font-size: 11px;
-	color: #aaa;
+	color: #600;
 	padding: 2px 0 20px 0;
 }
 
 
+.entry { line-height: 150%; }
 .postdate{ color: #aaa; }
 
 p.postmetadata{
-	font-size: 12px;
 	color: #BFB8A1;
-	border-top: 1px dotted #CCC;
-	margin: 20px 0 0 0;
+	margin: 1en 0 0 0;
 	padding: 5px 0 0 0;
 }
 
@@ -316,14 +307,12 @@ p.postmetadata strong{
 
 .postnav{
 	padding: 10px 20px 20px 10px;
-	font-size: 14px;
 	font-weight: bold;
 	line-height: 18px;
 }
 
 h2.archive_head{ 
 	font-weight: bold !important; 
-	font-size: 14px !important; 
 	text-transform: normal !important; 
 	letter-spacing: normal !important; 
 	margin: 0 0 1.8em 10px !important; 
@@ -347,7 +336,6 @@ h2.archive_head{
 
 
 .rightbar ul li h2{
-	font-size: 16px;
 	color: #555;
 	border-bottom: 1px solid #CCC;
 }
@@ -390,6 +378,7 @@ h2.archive_head{
 table#wp-calendar{
 	width: 100%;
 }
+#wp-calendar td { color: lightgray }
 
 /* Left Sidebar */
 
@@ -401,14 +390,12 @@ padding: 0;
 
 
 .leftbar ul li h2{
-	font-size: 16px;
 	color: #555;
 	border-bottom: 1px solid #CCC;
 }
 
 .leftbar ul ul li{
 	line-height: 18px;
-	font-size: 11px;
 }
 .leftbar a:link, a:visited{
 	text-decoration: none;
@@ -425,9 +412,9 @@ padding: 0;
 *******************/
 
 #comment-form{
-	width: 425px;
+	width: 560px;
 	background: #f1f0ed;
-	margin: 10px 0 0;
+	margin: 0px 0 0;
 	padding: 5px 5px 15px 15px;
 }
 
@@ -456,19 +443,16 @@ padding: 0;
 
 .comments-template h2, .comments-template h3{
 	font-family: Georgia, Sans-serif;
-	font-size: 16px;
 	color: #900;
 	padding: 10px 0 30px 0;
 }
 
 .commentmetadata{
-	font-size: 12px;
 	color: #AAA;
 	padding: 20px 0;
 }
 
 .commentmetadata strong { 
-	font-size: 14px; 
 }
 
 .comments-template p.nocomments{
@@ -481,7 +465,6 @@ padding: 0;
 
 .comments-template textarea{
 	font-family: Helvetica, Arial, Sans-serif;
-	font-size: 12px;
 	color: #000;
 	margin: 0px 15px 15px 0;
 	background: #FFF;
@@ -511,6 +494,7 @@ padding: 0;
 	text-decoration: underline;
 	color: #333;
 }
+a:hover { text-decoration: underline; }
 
 #footer a:visited{
 	text-decoration: none;
@@ -536,7 +520,7 @@ blockquote{
 .chapter_done { background-color: lightgreen; !important }
 .chapter_current { background-color: black; color: white; font-weight: bold; ! important }
 .comment_body { margin-top: 12pt; }
-P { margin-bottom: 1em; }
+P { margin-top: 1em; }
 
 .rightbar ul ul li.recentcomments { margin-bottom: 1em;  }
 
@@ -550,7 +534,7 @@ li { margin-bottom: 0.5em }
 
 .subscribe_text { background-image: url(images/subscribe.png); background-repeat: no-repeat; height: 20px; margin-bottom: 5px; }
 img#wpstats { visibility: hidden; height: 0px }
-.code { background: black;         color: #d8bfd8; }
+.code {  color: #d8bfd8; }
 .comment {
                         /* font-lock-comment-face */
                         color: #ff7f24;
@@ -566,7 +550,6 @@ img#wpstats { visibility: hidden; height: 0px }
                               .default {
                                           /* default */
                                           color: #d8bfd8;
-                                                  background-color: #000000;
                                                         }
                                     .keyword {
                                                 /* font-lock-keyword-face */
@@ -588,16 +571,20 @@ img#wpstats { visibility: hidden; height: 0px }
 .leftbar ul.featured_categories li { height: 100px; width: 100px; padding: 0px; margin: 0px; }
 .leftbar ul.featured_categories { margin: 0; padding: 0; }
 .featured_categories li a { display: block; text-indent: -9999px; height: 100px; width: 100px }
-.cat_work { background: transparent url(images/categories.png) 0px 0px no-repeat; }
-.cat_geek { background: transparent url(images/categories.png) 0px -200px no-repeat; }
-.cat_life { background: transparent url(images/categories.png) 0px -100px no-repeat; }
-.cat_sketches { background: transparent url(images/categories.png) 0px -300px no-repeat; }
-.cat_speaking { background: transparent url(images/categories.png) 0px -400px no-repeat; }
-.cat_connecting { background: transparent url(images/categories.png) 0px -500px no-repeat; }
-.cat_outsourcing { background: transparent url(images/categories.png) 0px -600px no-repeat; }
-.cat_emacs { background: transparent url(images/categories.png) 0px -700px no-repeat; }
-.cat_drupal { background: transparent url(images/categories.png) 0px -800px no-repeat; }
-.cat_weekly { background: transparent url(images/categories.png) 0px -900px no-repeat; }
+.featured_categories li { background: transparent url(images/categories.png) -100% -100% no-repeat; }
+li.cat_books { background-position: 0px -998px }
+.leftbar ul.featured_categories li.cat_blogging { background-position: 0px -1119px; height: 112px }
+li.cat_blogging a { height: 112px }
+li.cat_work { background-position: 0px 0px }
+li.cat_geek { background-position: 0px -200px }
+li.cat_life { background-position: 0px -100px }
+li.cat_sketches { background-position: 0px -300px}
+li.cat_speaking { background: transparent url(images/categories.png) 0px -400px no-repeat; }
+li.cat_connecting { background: transparent url(images/categories.png) 0px -500px no-repeat; }
+li.cat_outsourcing { background: transparent url(images/categories.png) 0px -600px no-repeat; }
+li.cat_emacs { background: transparent url(images/categories.png) 0px -700px no-repeat; }
+li.cat_drupal { background: transparent url(images/categories.png) 0px -800px no-repeat; }
+li.cat_weekly { background: transparent url(images/categories.png) 0px -900px no-repeat; }
 body { margin-top: 40px; }
 .footer {
 	border-top: 1px dotted #CCC;
@@ -614,3 +601,82 @@ body td.gsc-search-button { width: 16px; padding-left: 5px;}
 .future td.future_title { margin-left: 10px; margin-right: 10px; }
 td { vertical-align: top }
 th { text-align: left }
+.message { border: 1pt solid black; background-color: lightyellow; padding: 10px }
+.entry a:link, entry a:visited { text-decoration: underline }
+body .gsc-control-cse { padding: 0px; }
+body .gsc-control-cse { border: 0px; }
+body .cse .gsc-results div.gsc-cursor-current-page { background: white; border: 1pt solid darkred }
+.bulk .title { padding: 0; margin-top: 2em}
+.bulk { padding-left: 20px; }
+pre.src { color: #000 }
+#cboxLoadedContent {overflow: hidden !important;}
+
+/* Org */
+      .org-agenda-current-time {
+        /* org-agenda-current-time */
+        color: #b8860b;
+      }
+      .org-agenda-date-today {
+        /* org-agenda-date-today */
+        color: #0000ff;
+        font-weight: bold;
+        font-style: italic;
+      }
+      .org-agenda-structure {
+        /* org-agenda-structure */
+        color: #0000ff;
+      }
+      .org-scheduled-today {
+        /* org-scheduled-today */
+        color: #006400;
+      }
+      .org-tag {
+        /* org-tag */
+        font-weight: bold;
+      }
+      .org-time-grid {
+        /* org-time-grid */
+        color: #b8860b;
+      }
+      .org-todo {
+        /* org-todo */
+        color: #ff0000;
+        font-weight: bold;
+      }
+
+.update {
+margin-top: 20px;
+border: 1px dotted #CCC;
+padding: 10px;
+margin-right: 0px;
+}
+.update .date { font-style: italic }
+      .org-habit-alert {
+        /* org-habit-alert-face */
+        background-color: #f5f946;
+      }
+      .org-habit-alert-future {
+        /* org-habit-alert-future-face */
+        background-color: #fafca9;
+      }
+      .org-habit-clear {
+        /* org-habit-clear-face */
+        background-color: #8270f9;
+      }
+      .org-habit-clear-future {
+        /* org-habit-clear-future-face */
+        background-color: #d6e4fc;
+      }
+      .org-habit-overdue {
+        /* org-habit-overdue-face */
+        background-color: #f9372d;
+      }
+      .org-habit-overdue-future {
+        /* org-habit-overdue-future-face */
+        background-color: #fc9590;
+      }
+      .org-habit-ready {
+        /* org-habit-ready-face */
+        background-color: #4df946;
+      }
+

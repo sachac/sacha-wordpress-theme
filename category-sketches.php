@@ -12,7 +12,7 @@ else
 <style type="text/css">ul.post_list li { margin-bottom: 10px; } </style>
 
 <div class="grid_16 content">
-
+<div id="cse" style="width:100%;"></div>
 	<?php if(have_posts()): ?>
 	
 	<h2 class="archive_head">Entries Tagged as '<?php echo single_cat_title(); ?>'</h2>

@@ -10,6 +10,7 @@ else
 }
 ?>
 <div class="grid_16 content">
+<div id="cse" style="width:100%;"></div>
   <h1>Best of...</h1>
   <p>There are a <em>lot</em> of posts on my blog, so I thought I'd put together a list of my favourites. If you really liked something that's not on this list, please e-mail me at <a href="mailto:sacha@sachachua.com">sacha@sachachua.com</a> so that I can add it!</p>
   <?php if(have_posts()): ?>

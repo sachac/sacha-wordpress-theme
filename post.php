@@ -14,13 +14,13 @@
 </div>
 <? if (function_exists('the_ratings')) { 
 the_ratings(); } ?> 
-<? if (function_exists('social_bookmark')) { social_bookmark(); } ?> 
-- <a class="share-via-twitter" href="http://twitter.com/home?status=Reading: <?php the_title(); ?> <?php echo get_option('home'); ?>/p/<?php the_ID(); ?>" title="Tweet this post">Twitter</a>
  
+<iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_permalink($post->ID)); ?>&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:60px"></iframe><br />
+                            Short URL: <a href="<?php echo get_option('home'); ?>/p/<?php the_ID(); ?>"><?php echo get_option('home'); ?>/p/<?php the_ID(); ?></a>
+
 				<p class="postmetadata">
-<?php _e('More posts about:&#58;'); ?> <?php the_category(', ') ?>
+<?php _e('More posts about:'); ?> <?php the_category(', ') ?>
 <?php edit_post_link('Edit', ' &#124; ', ''); ?>
-//
 <strong><?php comments_popup_link('Add Comment &#187;', '1 Comment
                                                             &#187;',
                  '% Comments &#187;'); ?></strong>

@@ -70,7 +70,7 @@ $oddcomment = 'alt';
 
 <?php if ('open' == $post->comment_status) : ?>
 
-		<h3 id="respond">Discussion Area   -   Leave a Comment</h3>
+		<h3 id="respond">Comment, share a thought, ask a question...</h3>
 
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php the_permalink(); ?>">logged in</a> to post a comment.</p>
@@ -103,7 +103,7 @@ Please comment as you, not your organization.
 
 <p><label for="comment"><small>Comment</small></label><br /><textarea name="comment" id="comment" cols="60" rows="10" tabindex="4"></textarea></p>
 
-<p class="submit"><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<p class="submit"><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" onclick="javascript: pageTracker._trackPageview('/blog/commented');"/>
 <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
 </p>
 

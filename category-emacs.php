@@ -12,6 +12,7 @@ else
 <style type="text/css">ul.post_list li { margin-bottom: 10px; } </style>
 
 <div class="grid_16 content">
+<div id="cse" style="width:100%;"></div>
   <h1>Emacs</h1>
 
 <p>

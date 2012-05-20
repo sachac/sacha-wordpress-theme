@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-<div class="grid_10 content push_2">
+<div class="grid_10 content">
 <div id="container">
-
+<div id="cse" style="width:100%;"></div>
 		<div class="navigation">
 			<?php previous_post_link('&laquo; %link') ?> - <?php next_post_link('%link &raquo;') ?>
 		</div>
@@ -24,18 +24,15 @@ the_ratings(); } ?>
 
 
 <script src="http://feeds.feedburner.com/~s/sachac?i=<?php the_permalink() ?>" type="text/javascript" charset="utf-8"></script>
-<? if (function_exists('social_bookmark')) { social_bookmark(); } ?> 
-- <a class="share-via-twitter" href="http://twitter.com/home?status=Reading: <?php the_title(); ?> <?php echo get_option('home'); ?>/p/<?php the_ID(); ?>" title="Tweet this post">Twitter</a>
-
 				<?php link_pages('<p><strong>Pages:</strong>','</p>','number'); ?>
 
 				<p class="postmetadata">
-<?php _e('More posts about...&#58;'); ?> <?php the_category(', ') ?> <?php edit_post_link('Edit', ' &#124; ', ''); ?> // <strong><?php comments_popup_link('Add Comment &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></strong> 				
+<?php _e('More posts about:'); ?> <?php the_category(', ') ?> <?php edit_post_link('Edit', ' &#124; ', ''); ?> // <strong><?php comments_popup_link('Add Comment &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></strong> 				
 				</p>
+                            Short URL: <a href="<?php echo get_option('home'); ?>/p/<?php the_ID(); ?>"><?php echo get_option('home'); ?>/p/<?php the_ID(); ?></a>
 
 			</div>
 
-			
 				<div class="comments-template">
 					<?php comments_template(); ?>
 				</div>
@@ -62,9 +59,20 @@ the_ratings(); } ?>
 	<?php endif; ?>
 <h2>On This Day...</h2>
 <?php OTDList() ?>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-6843711662037351";
+/* Sidebar */
+google_ad_slot = "3121886175";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+			
 
 </div>
-
 <?php get_sidebar(); ?>
 
 <?php get_footer() ?>

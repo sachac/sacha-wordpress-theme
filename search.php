@@ -2,7 +2,7 @@
 <?php $wp_query->query('showposts=25'); ?>
 
 <div id="container">
-
+<div id="cse" style="width:100%;"></div>
 	<?php if(have_posts()): ?><?php while(have_posts()):the_post(); ?>
 
 		<div class="post">

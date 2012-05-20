@@ -1,29 +1,8 @@
-<?php if ($_GET['bulk']) { 
-$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=1000'); 
-if (have_posts()) {
-   // Print regular, for export
-?>
-<?php
-	 while(have_posts()) { the_post(); ?>
-         <h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-         <div class="permalink"><?php the_permalink(); ?></div>
-         <div class="date"><?php the_time('F j, Y') ?> - Categories: <?php the_category(', ') ?></div>
-         <div class="body">
-            <?php the_content() ?>
-         </div>
-<?php } 
-}
-}
-else { 
-  get_header(); ?>
-<div class="grid_10 content push_2">
-<div id="container">
 <?php 
+
   $y = mysql2date('Y', $wp_query->posts[0]->post_date);
   $m = mysql2date('m', $wp_query->posts[0]->post_date);
   $d = mysql2date('d', $wp_query->posts[0]->post_date);
-  $posts = query_posts($query_string . '&orderby=date&order=desc&posts_per_page=-1'); 
-   
   $display = mktime(0, 0, 0, $m, $d, $y);
   if (is_year()) {
     $format = 'Y';
@@ -42,7 +21,68 @@ else {
     $url_format = 'Y/n/j';
   }
   $paged = get_query_var('paged');
-  if ($paged < 2) { // No previous pages; navigate by date instead
+  $title = date($format, $display);
+$last_month = null;
+if ($_GET['bulk']) { 
+$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=1000'); ?>
+<html><head><link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" /><title><?php print $title ?></title><body>
+<div class="bulk">
+<h1 class="bulk_title"><?php print $title ?></h1>
+<?php if (have_posts()) {
+   // Print regular, for export
+?>
+<ul>
+<?php
+	 while(have_posts()) { the_post(); ?>
+<li><a href="#post-<?php the_ID(); ?>"><?php the_title(); ?></a></li>
+         <?php } ?>
+</ul>
+<?php 
+         rewind_posts();
+while(have_posts()) { the_post();
+  if (is_year() && get_the_time('F Y') != $last_month) {
+    print '<h1 class="month">' . get_the_time('F Y') . '</h1>';
+    $last_month = get_the_time('F Y');
+  }
+  ?>
+    
+         <h2 class="title" id="post-<?php the_ID(); ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+<div class="permalink"><a href="<?php echo get_option('home'); ?>/p/<?php the_ID(); ?>"><?php echo get_option('home'); ?>/p/<?php the_ID(); ?></a></div>
+         <div class="date"><?php the_time('F j, Y') ?> - Categories: <?php the_category(', ') ?></div>
+         <div class="body">
+            <?php the_content() ?>
+         </div>
+<?php }} ?>
+</div></body></html>
+<?php
+}
+else if ($_GET['list']) {
+$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=1000'); 
+print '<ul>';
+	 while(have_posts()) { the_post(); ?>
+         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></li>
+<?php
+}
+print "</ul>"; 
+}
+else if ($_GET['org']) {
+$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=1000'); 
+print '<pre>';
+	 while(have_posts()) { the_post(); ?>
+- [[<?php the_permalink(); ?>][<?php the_title(); ?>]]
+<?php
+}
+print '</pre>';
+}
+else { 
+  get_header(); ?>
+<div class="grid_10 content">
+<div id="container">
+<div id="cse" style="width:100%;"></div>
+<?php 
+  $posts = query_posts($query_string . '&orderby=date&order=desc&posts_per_page=-1'); 
+   
+  /*if ($paged < 2) { // No previous pages; navigate by date instead
     $past = $wpdb->get_row("SELECT UNIX_TIMESTAMP(MAX(post_date)) AS post_date
 FROM $tableposts WHERE post_date <= FROM_UNIXTIME($prev_display) AND post_status='publish'");
     if ($past->post_date) {
@@ -59,8 +99,7 @@ FROM $tableposts WHERE post_date >= FROM_UNIXTIME($next_display) AND post_status
       $next_link = get_bloginfo('url') . '/'
         . date($url_format, $future->post_date);
     }
-  }
-  $title = date($format, $display);
+  }*/
   ?>
   <div class="navigation">
     <div class="left">
@@ -80,12 +119,16 @@ FROM $tableposts WHERE post_date >= FROM_UNIXTIME($next_display) AND post_status
     <div style="clear: both"></div>
   </div>
   <h1><?php print $title ?></h1>
+<p><a href="<?php print modify_url(array('bulk' => 1)); ?>">Bulk view</a></p>
+
 <?php if (is_day()) {
 	$year = $wp_query->query_vars['year'];
 	$month = $wp_query->query_vars['monthnum'];
 	$day = $wp_query->query_vars['day'];
-	}?>
+  }?>
 	<?php if(have_posts()): ?>
+            <?php if (is_day()) {
+      while (have_posts()) { the_post(); include 'post.php'; } } else { ?>
 <table>
 <tr><th width="50">Date</th><th>Title</th><th>Categories</th></tr>
 	<?php while(have_posts()):the_post(); ?>
@@ -93,7 +136,8 @@ FROM $tableposts WHERE post_date >= FROM_UNIXTIME($next_display) AND post_status
 			<tr><td><?php the_time('M j') ?></td><td><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></td><td><?php the_category(', ') ?></td></tr>
 
 	<?php endwhile; ?>
-</table>
+                                                                                                                                                            </table>
+                                                                                                                                                                <?php } ?>
 
 		<div class="postnav">
 			<?php posts_nav_link(); ?>

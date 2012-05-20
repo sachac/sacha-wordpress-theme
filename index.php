@@ -1,5 +1,13 @@
 <?php get_header(); ?>
-<div class="grid_10 content push_2">
+<?php 
+if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
+  global $query_string;
+  query_posts($query_string . '&posts_per_page=' . $_REQUEST['posts']);
+# } else {
+# query_posts($query_string . '&posts_per_page=3'); 
+} ?>
+<div class="grid_10 content">
+<div id="cse" style="width:100%;"></div>
     <div class="hfeed">
   <div class="navigation">
     <div class="left">
@@ -17,18 +25,15 @@
     <?php endwhile; rewind_posts(); ?>
     </ul></p>
 <?php while(have_posts()):the_post();
- include('post.php'); ?>
-  <?php endwhile; ?>
-
-  <div class="navigation">
+ include('post.php'); 
+ endwhile; ?>
+</div>  <div class="navigation">
     <div class="left">
       <?php next_posts_link('&laquo; Older posts'); ?>
     </div><div class="right">	
       <?php previous_posts_link('Newer posts &raquo;'); ?>
     </div>
-<div style="clear: both"></div>
-  </div>
-
+    <div style="clear: both"></div>
 	<?php else: ?>
 
 		<div class="post" id="post-<?php the_ID(); ?>">
@@ -36,7 +41,6 @@
 			<h2><?php _e('Not Found'); ?></h2>
 
 		</div>
-
 	<?php endif; ?>
 
 </div>
