@@ -38,13 +38,7 @@ function recordOutboundLink(link, category, action) {
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	<?php wp_head(); ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
 <script src="http://sachachua.com/blog/wp-content/themes/sacha-v3/jquery.sparkline.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(function() {
-  $('.sparkline').sparkline();
-});
-</script>
 </head>
 
 <body><div id="body">

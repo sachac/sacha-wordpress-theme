@@ -19,5 +19,10 @@ Copyright &#169; 2001-2012 Sacha Chua (<a href="mailto:sacha@sachachua.com">sach
 </div></div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <?php wp_footer(); ?>
-</div></body>
+</div>
+<script type="text/javascript">
+jquery(document).ready(function() {
+   jquery('.sparkline').sparkline();
+});
+</body>
 </html>
