@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
 	<title><?php wp_title('&raquo;', 1, 'right'); bloginfo('name'); ?></title>
@@ -47,13 +48,13 @@ function recordOutboundLink(link, category, action) {
    <div class="grid_11 header" style="text-align: left">
      <h1><a href="<?php bloginfo('url'); ?>">sacha chua</a> :: living an awesome life</h1>
 <ul class="links">
-<li><a href="http://sachachua.com/">Home</a></li>
-<li><a href="http://sachachua.com/blog/about/">About</a></li>
-<li><a href="http://sachachua.com/blog/speaking">Speaking</a></li>
-                                                        <li><a href="http://sachachua.com/blog/category/yearly">Yearly</a></li>
-                                                        <li><a href="http://sachachua.com/blog/archive/">Archives</a></li>
+<li><a href="/">Home</a></li>
+<li><a href="/blog/sketchnotes">Sketchnotes</a></li>
+<li><a href="/blog/speaking">Speaking</a></li>
+<li><a href="/blog/about/">About</a></li>
+<li><a href="/blog/archive/">Archives</a></li>
 <li><a href="http://dl.dropbox.com/u/3968124/blog.html">Topical index</a></li>
-<li><a href="http://sachachua.com/blog/contact">Contact</a></li></ul>
+<li><a href="/blog/contact">Contact</a></li></ul>
 </div>
    <div class="grid_1"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/face.png" height="72" alt="" width="55" /></div>   
 <div class="grid_3">
