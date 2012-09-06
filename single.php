@@ -1,4 +1,17 @@
-<?php get_header(); ?>
+<?php if ($_REQUEST['dump']) { 
+  remove_all_filters('the_content');
+  while (have_posts()): the_post(); ?>
+  <div class="post">
+  <h2><?php the_title() ?></h2>
+  <span class="date"><?php the_time('F jS, Y') ?></span>
+  <span class="perm">- <a class="permalink" href="<?php echo get_option('home'); ?>/p/<?php the_ID(); ?>"><?php echo get_option('home'); ?>/p/<?php the_ID(); ?></a></span>
+  <div class="entry"><?php the_content() ?></div>
+  </div>
+<?php 
+  endwhile;
+  exit;
+} ?>
+<?php get_header(); ?> 
 <div class="grid_10 content">
 <div id="container">
 <div id="cse" style="width:100%;"></div>
@@ -59,18 +72,6 @@ the_ratings(); } ?>
 	<?php endif; ?>
 <h2>On This Day...</h2>
 <?php OTDList() ?>
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-6843711662037351";
-/* Sidebar */
-google_ad_slot = "3121886175";
-google_ad_width = 300;
-google_ad_height = 250;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-			
 
 </div>
 <?php get_sidebar(); ?>

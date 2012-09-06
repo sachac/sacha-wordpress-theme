@@ -679,4 +679,5 @@ margin-right: 0px;
         /* org-habit-ready-face */
         background-color: #4df946;
       }
+.verse { border-left: 1px solid #ccc; padding-left: 10px }
 
