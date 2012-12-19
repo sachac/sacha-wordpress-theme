@@ -10,6 +10,10 @@
     </div>
 <div style="clear: both"></div>
   </div>
+<?php if (is_category()) {
+if (category_description()) { 
+echo '<div class="category-description">' . category_description() . '</div>';
+} }?>
   <?php if(have_posts()): ?>
 <p>On this page:
     <ul>

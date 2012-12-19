@@ -46,8 +46,8 @@ function recordOutboundLink(link, category, action) {
 <div class="container_16">
    <div class="grid_1"><img src="http://sachachua.com/notebook/pics/sacha-20080111-48x72-lowres.jpg" alt="" width="48" height="72" /></div>
    <div class="grid_11 header" style="text-align: left">
-     <h1><a href="<?php bloginfo('url'); ?>">sacha chua</a> :: living an awesome life</h1>
-<ul class="links">
+     <h1><a href="<?php bloginfo('url'); ?>">sacha chua :: living an awesome life</a></h1>
+<ul class="links" style="margin-bottom: 0">
 <li><a href="/">Home</a></li>
 <li><a href="/blog/sketchnotes">Sketchnotes</a></li>
 <li><a href="/blog/speaking">Speaking</a></li>
@@ -55,13 +55,14 @@ function recordOutboundLink(link, category, action) {
 <li><a href="/blog/archive/">Archives</a></li>
 <li><a href="http://dl.dropbox.com/u/3968124/blog.html">Topical index</a></li>
 <li><a href="/blog/contact">Contact</a></li></ul>
+<strong>Quantified Self: Check out my dashboard and data at <a href="http://quantifiedawesome.com">QuantifiedAwesome.com</a></strong>
 </div>
    <div class="grid_1"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/face.png" height="72" alt="" width="55" /></div>   
 <div class="grid_3">
 <?php $numcomms = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->comments WHERE comment_approved='1'");
 echo $numcomms . " comments<br />"; ?>
                                                         <?php if (function_exists('stcounter')) { echo stcounter('feedburner') . ' subscribers<br />'; } ?>
-      <?php if (function_exists('stcounter')) { echo stcounter('twitter') . ' on <a href="http://twitter.com/sachac">Twitter</a><br />'; } ?>
+      <?php if (function_exists('stcounter')) { if (stcounter('twitter')) { echo stcounter('twitter') . ' on <a href="http://twitter.com/sachac">Twitter</a><br />'; } else { echo '<a href="http://twitter.com/sachac">Follow me on Twitter (@sachac)</a><br />'; } } ?>
 <a href="http://sachachua.com/blog/feed" onclick="javascript:recordOutboundLink(this, 'Subscription','/subscribe/rss/text');"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/subscribe.png" height="15" width="88" alt="Subscribe!" style="margin-bottom: 5px" border="0"/></a>
    <a href="http://sachachua.com/blog/feed" onclick="javascript:recordOutboundLink(this, 'Subscription','/subscribe/rss/text');"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/rss-icon.png" height="20" alt="Feed reader" border="0" width="22"/></a>
    <a href="http://feedburner.google.com/fb/a/mailverify?uri=sachac&amp;loc=en_US"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/email.png" height="20" alt="E-mail" border="0" width="27" /></a><br />

@@ -681,3 +681,6 @@ margin-right: 0px;
       }
 .verse { border-left: 1px solid #ccc; padding-left: 10px }
 
+.ngg-gallery-thumbnail-box { width: 190px }
+.ngg-gallery-thumbnail { text-align: left }
+.ngg-gallery-thumbnail img { padding: 0 }
