@@ -1,6 +1,6 @@
 <div class="clear"></div>
 <div class="grid_16 footer">
-   <p>Like this? <a href="http://feeds.feedburner.com/sachac" onclick="javascript:recordOutboundLink(this, 'Subscription','/subscribe/rss/text');return false;">Subscribe using your feed reader</a> or <a href="http://sachachua.com/blog/subscribe">your e-mail client</a>! <a href="http://twitter.com/sachac">Follow me on Twitter</a> for quick updates, too. <a href="http://sachachua.com/blog/contact">Contact me</a>: I'd love to hear your thoughts, questions, and suggestions!</p>
+   <p>Like this? <a href="http://feeds.feedburner.com/sachac" onclick="javascript:recordOutboundLink(this, 'Subscription','/subscribe/rss/text');return false;">Subscribe using your feed reader</a> or <a href="http://sachachua.com/blog/subscribe">your e-mail client</a>! <a href="http://twitter.com/sachac">Follow me on Twitter</a> for quick updates, and add me on <a href="https://plus.google.com/113865527017476906160/posts?rel=author" rel="publisher">Google+</a>. <a href="http://sachachua.com/blog/contact">Contact me</a>: I'd love to hear your thoughts, questions, and suggestions!</p>
    
    <ul class="links">
 <li><a href="/blog">Home</a></li>

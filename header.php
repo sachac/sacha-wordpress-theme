@@ -12,6 +12,7 @@
 	<link rel="openid.server" href="http://sachachua.com/openid/MyID.config.php" />
 <meta name="google-site-verification" content="ktFeZ-wntcsTZ0G2mnZF0uKejd6L9YKHrlyGOezAiQU" />
 	<link rel="openid.delegate" href="http://sachachua.com/openid/MyID.config.php" />
+<link href="https://plus.google.com/113865527017476906160" rel="publisher" />
 <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /> 
 
 <script type="text/javascript">

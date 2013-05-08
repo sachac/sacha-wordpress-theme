@@ -74,6 +74,15 @@ print '<pre>';
 }
 print '</pre>';
 }
+else if ($_GET['table']) {
+$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=1000'); 
+print '<table>';
+	 while(have_posts()) { the_post(); ?>
+<tr><td><?php the_ID(); ?></td><td><?php the_title(); ?></td><td><?php the_permalink(); ?></td><td><?php echo strlen(get_the_content()); ?></td><td><?php the_time("Y-n-j G:i"); ?></td></tr>
+<?php
+}
+print '</table>';
+}
 else { 
   get_header(); ?>
 <div class="grid_10 content">

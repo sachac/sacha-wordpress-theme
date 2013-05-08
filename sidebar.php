@@ -1,7 +1,7 @@
 </div><!-- end of content area -->
 <div class="grid_4 rightbar">
 <ul>
-    <li><?php include('searchform.php'); ?></li>
+    <li><?php get_search_form(true); ?></li>
     <li><a href="http://sachachua.com/blog/2009/12/what-can-i-help-you-learn-looking-for-mentees/">What can I help you learn?</a></li>
     <li><a href="http://dl.dropbox.com/u/3968124/learning.html">Want to help me with what I'm learning?</a></li>
 <?php
