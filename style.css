@@ -12,7 +12,6 @@ Author: Sacha Chua
    padding-bottom: 8px;
 }
 /* END RECAPTCHA STYLING */
-
 body, h1, h2, h3, h4, h5, h6, blockquote, p, form{
 	margin: 0;
 	padding: 0;
@@ -20,12 +19,13 @@ body, h1, h2, h3, h4, h5, h6, blockquote, p, form{
 }
 
 h2 { margin-top: 0.83em; margin-bottom: 0.83em; }
-h1 { margin-top: 0.83em; margin-bottom: 0.83em; font-size: 35px }
-.header h1 { margin: 0; font-size: 35px  }
+h1 { margin-top: 0.83em; margin-bottom: 0.83em; font-size: 25px; }
+.header h1 { margin: 0; }
+h1, h2, h3 { font-family: 'Gloria Hallelujah', cursive; }
 
 body{
 	margin-top: 20px;
-	font-family: Calibri, Trebuchet MS, Verdana, Arial, Sans-Serif;
+	font-family: 'Open Sans', Calibri, Trebuchet MS, Verdana, Arial, Sans-Serif;
 	font-size: 12pt;
 	text-align: left;
         
@@ -275,12 +275,12 @@ textarea#comment {
 /*******************
 ---------Post-------
 *******************/
-
+.post { border-top: 1px solid lightgray }
 .post h2{
 	text-transform: normal;
-	padding: 20px 0 0 0;
         text-shadow: #bbb 1px 1px 1px;
 }
+body div.sharedaddy div.sd-block { border-top: 0 }
 
 pre { overflow: auto; width: 90%; padding: 5px 5px 5px 5px; -webkit-box-shadow: #aaa 1px 1px 2px; border: 1px solid #aaa }
 
@@ -442,7 +442,6 @@ padding: 0;
 }
 
 .comments-template h2, .comments-template h3{
-	font-family: Georgia, Sans-serif;
 	color: #900;
 	padding: 10px 0 30px 0;
 }
@@ -464,7 +463,6 @@ padding: 0;
 }
 
 .comments-template textarea{
-	font-family: Helvetica, Arial, Sans-serif;
 	color: #000;
 	margin: 0px 15px 15px 0;
 	background: #FFF;
@@ -962,5 +960,5 @@ body .ngg-gallery-thumbnail { text-align: left }
 }
 .org-diff-indicator-changed {
 }
-.org-diff-indicator-removed {
-
+.org-diff-indicator-removed { }
+.widget h2 { font-size: 14px }

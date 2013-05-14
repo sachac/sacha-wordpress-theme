@@ -14,6 +14,7 @@
 	<link rel="openid.delegate" href="http://sachachua.com/openid/MyID.config.php" />
 <link href="https://plus.google.com/113865527017476906160" rel="publisher" />
 <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /> 
+<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Open+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 
 <script type="text/javascript">
 function recordOutboundLink(link, category, action) {
@@ -56,7 +57,6 @@ function recordOutboundLink(link, category, action) {
 <li><a href="/blog/archive/">Archives</a></li>
 <li><a href="http://dl.dropbox.com/u/3968124/blog.html">Topical index</a></li>
 <li><a href="/blog/contact">Contact</a></li></ul>
-<strong>Quantified Self: Check out my dashboard and data at <a href="http://quantifiedawesome.com">QuantifiedAwesome.com</a></strong>
 </div>
    <div class="grid_1"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/face.png" height="72" alt="" width="55" /></div>   
 <div class="grid_3">

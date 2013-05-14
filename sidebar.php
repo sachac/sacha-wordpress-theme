@@ -74,8 +74,10 @@ if ($x && strpos($x, 'zemanta') === FALSE) {
    <li class="cat_drupal"><a href="http://sachachua.com/blog/category/drupal"><span>Drupal</span></a></li>
    <li class="cat_weekly"><a href="http://sachachua.com/blog/category/weekly"><span>Weekly reports</span></a></li>
 </ul></li>
+<div class="widget">
 <h2>Get the highlights as a PDF!</h2>
 <a href="http://www.lulu.com/shop/sacha-chua/stories-from-my-twenties-highlights-of-a-decade-of-blogging/ebook/product-20223728.html"><img width="100" src="/blog/wp-content/themes/sacha-v3/images/stories-from-my-twenties.png" alt="Stories from my Twenties: Highlights from a Decade of Blogging" /></a>
+</div>
 	<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar(2))
     ; ?>
 </div>
