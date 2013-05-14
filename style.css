@@ -962,3 +962,5 @@ body .ngg-gallery-thumbnail { text-align: left }
 }
 .org-diff-indicator-removed { }
 .widget h2 { font-size: 14px }
+.featured_categories li { display: inline-block }
+ul.featured_categories { padding: 0; margin: 0 }
