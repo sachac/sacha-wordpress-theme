@@ -72,7 +72,5 @@ echo $numcomms . " comments<br />"; ?>
                                            <?php } ?>
                                       </div>
 <div class="clear"></div>
-<div class="grid_16" style="border-bottom: 1pt solid #CCCCCC; margin-bottom: 10px;"></div>
-<div class="clear"></div>
  
 
