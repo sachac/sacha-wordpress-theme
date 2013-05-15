@@ -18,12 +18,11 @@
   <br />
   <ul class="links">
     <li><a href="/blog">Home</a></li>
-    <li><a href="/blog/sketchnotes">Sketchnotes</a></li>
-    <li><a href="/blog/speaking">Speaking</a></li>
-    <li><a href="/blog/archive/">Archives</a></li>
-    <li><a href="http://dl.dropbox.com/u/3968124/blog.html">Topical index</a></li>
-    <li><a href="/blog/privacy">Privacy</a>
     <li><a href="/blog/about/">About</a></li>
+    <li><a href="http://dl.dropbox.com/u/3968124/blog.html">Index</a></li>
+    <li><a href="/blog/archive/">Archives</a></li>
+    <li><a href="/blog/?random">Random</a></li>
+    <li><a href="/blog/privacy">Privacy</a>
     <li><a href="/blog/contact">Contact</a>
   </li></ul>
 

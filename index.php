@@ -9,6 +9,13 @@ if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
 <div class="grid_10 content">
 <div id="cse" style="width:100%;"></div>
     <div class="hfeed">
+<?php if ( is_search() ) { 
+echo "<h1>Search results: " . get_search_query() . "</h1>"; 
+if (!have_posts()) {
+   echo '<p>Your search for <strong>' . get_search_query() . '</strong> has returned no results. Please try a new search. Got an idea for a blog post you\'d like me to write? <a href="/blog/contact">Contact me!</a></p>';
+}
+} ?>
+
   <div class="navigation">
     <div class="left">
       <?php next_posts_link('&laquo; Older posts'); ?>
@@ -36,11 +43,8 @@ if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
     <div style="clear: both"></div>
 	<?php else: ?>
 
-		<div class="post" id="post-<?php the_ID(); ?>">
+	<h2><?php _e('Couldn\'t find it... Sorry!'); ?></h2>
 
-			<h2><?php _e('Not Found'); ?></h2>
-
-		</div>
 	<?php endif; ?>
 
 </div>

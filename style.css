@@ -994,7 +994,9 @@ ul.featured_categories { padding: 0; margin: 0 }
 #archives { width: 124px; height: 40px; background-position: -371px -105px; display: inline-block }
 #random { width: 122px; height: 40px; background-position: -495px -105px; display: inline-block }
 #contact { width: 126px; height: 40px; background-position: -617px -105px; display: inline-block }
-#searchsubmit { background: url(images/design-highlighted.png) 0 0 no-repeat;
+#searchsubmit:hover { background: url(images/design-highlighted.png) 0 0 no-repeat; background-position: -4px -148px; }
+
+#searchsubmit { background: url(images/design.png) 0 0 no-repeat;
   background-position: -4px -148px; 
   width: 89px; height: 33px;
   overflow: hidden;
@@ -1003,10 +1005,12 @@ ul.featured_categories { padding: 0; margin: 0 }
   cursor: pointer;
   cursor: hand;
 }
+
 .header .links .replace:hover { background: url(images/design-highlighted.png) 0 0 no-repeat; }
-.header .links li { display: inline }
+.links li { display: inline; }
 .header .links { left: 81px; position: relative }
 .header { 
    position: relative;
 }
 .stats { padding-top: 25px }
+.footer .links li { margin-right: 10px; }
