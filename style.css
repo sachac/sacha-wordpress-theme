@@ -20,11 +20,9 @@ body, h1, h2, h3, h4, h5, h6, blockquote, p, form{
 
 h2 { margin-top: 0.83em; margin-bottom: 0.83em; line-height: 100%; }
 h1 { margin-top: 0.83em; margin-bottom: 0.83em; font-size: 25px; }
-.header h1 { margin: 0; }
 h1, h2, h3 { font-family: 'Gloria Hallelujah', cursive; }
 
 body{
-	margin-top: 20px;
 	font-family: 'Open Sans', Calibri, Trebuchet MS, Verdana, Arial, Sans-Serif;
 	font-size: 12pt;
 	text-align: left;
@@ -565,7 +563,6 @@ img#wpstats { visibility: hidden; height: 0px }
                                                 
 
 .links { padding-left: 0px; margin-top: 0px; }
-.links li { display: inline; margin-right: 10px; }
 .container_16 { text-align: left; } 
 .leftbar ul.featured_categories li { height: 100px; width: 100px; padding: 0px; margin: 0px; }
 .leftbar ul.featured_categories { margin: 0; padding: 0; }
@@ -584,7 +581,6 @@ li.cat_outsourcing { background: transparent url(images/categories.png) 0px -600
 li.cat_emacs { background: transparent url(images/categories.png) 0px -700px no-repeat; }
 li.cat_drupal { background: transparent url(images/categories.png) 0px -800px no-repeat; }
 li.cat_weekly { background: transparent url(images/categories.png) 0px -900px no-repeat; }
-body { margin-top: 40px; }
 .footer {
 	border-top: 1px dotted #CCC;
 	border-bottom: none;
@@ -964,5 +960,45 @@ body .ngg-gallery-thumbnail { text-align: left }
 .widget h2 { font-size: 14px }
 .featured_categories li { display: inline-block }
 ul.featured_categories { padding: 0; margin: 0 }
+
 .rightbar ul { list-style-type: none }
 .widget ul { list-style: disc; padding-left: 20px; margin: 0px }
+
+.replace { white-space: nowrap; overflow: hidden; text-indent: 100%; }
+
+.header .name {    
+   width: 81px; 
+   height: 145px;
+   display: block; 
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+.header .site-title {
+   width: 650px;
+   display: block;
+   height: 104px;
+   left: 81px;
+   background: url(images/design-highlighted.png);
+   background-position: -81px 0px;
+   position: relative;
+}
+
+.home-design { background: url(images/design.png) 0 0 no-repeat; }
+
+
+.header h1 { margin: 0 }
+#home { width: 96px; height: 40px; background-position: -81px -105px; display: inline-block }
+#about { width: 89px; height: 40px; background-position: -177px -105px; display: inline-block }
+#index { width: 105px; height: 40px; background-position: -266px -105px; display: inline-block }
+#archives { width: 124px; height: 40px; background-position: -371px -105px; display: inline-block }
+#random { width: 122px; height: 40px; background-position: -495px -105px; display: inline-block }
+#contact { width: 126px; height: 40px; background-position: -617px -105px; display: inline-block }
+
+.header .links .replace:hover { background: url(images/design-highlighted.png) 0 0 no-repeat; }
+.header .links li { display: inline }
+.header .links { left: 81px; position: relative }
+.header { 
+   position: relative;
+}
+.stats { padding-top: 25px }

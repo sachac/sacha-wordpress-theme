@@ -25,7 +25,7 @@ function recordOutboundLink(link, category, action) {
   }catch(err){}
 }
 </script>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=20130514-3" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" media="screen" />
 	<!--[if lte IE 6]>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/ie6.css" media="screen" />
 	<![endif]-->
@@ -46,20 +46,20 @@ function recordOutboundLink(link, category, action) {
 
 <body><div id="body">
 <div class="container_16">
-   <div class="grid_1"><img src="http://sachachua.com/notebook/pics/sacha-20080111-48x72-lowres.jpg" alt="" width="48" height="72" /></div>
-   <div class="grid_11 header" style="text-align: left">
-     <h1><a href="<?php bloginfo('url'); ?>">sacha chua :: living an awesome life</a></h1>
+  <div class="grid_13 header" style="text-align: left">
+    <h1>
+      <a href="<?php bloginfo('url'); ?>"><span class="replace name home-design">sacha chua</span>
+      <span class="replace site-title home-design">living an awesome life</span></a></h1>
+
 <ul class="links" style="margin-bottom: 0">
-<li><a href="/">Home</a></li>
-<li><a href="/blog/about/">About</a></li>
-<li><a href="/blog/sketchnotes">Sketchnotes</a></li>
-<li><a href="/blog/?random">Random</a></li>
-<li><a href="/blog/archive/">Archives</a></li>
-<li><a href="http://dl.dropbox.com/u/3968124/blog.html">Topical index</a></li>
-<li><a href="/blog/contact">Contact</a></li></ul>
+<li><a id="home" class="replace home-design" href="/">Home</a></li>
+<li><a id="about" class="replace home-design" href="/blog/about/">About</a></li>
+<li><a id="index" class="replace home-design" href="http://dl.dropbox.com/u/3968124/blog.html">Index</a></li>
+<li><a id="archives" class="replace home-design" href="/blog/archive/">Archives</a></li>
+<li><a id="random" class="replace home-design" href="/blog/?random">Random</a></li>
+<li><a id="contact" class="replace home-design" href="/blog/contact">Contact</a></li></ul>
 </div>
-   <div class="grid_1"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/face.png" height="72" alt="" width="55" /></div>   
-<div class="grid_3">
+<div class="grid_3 stats">
 <?php $numcomms = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->comments WHERE comment_approved='1'");
 echo $numcomms . " comments<br />"; ?>
                                                         <?php if (function_exists('stcounter')) { echo stcounter('feedburner') . ' subscribers<br />'; } ?>
