@@ -36,6 +36,8 @@ function recordOutboundLink(link, category, action) {
 	<link rel="alternate" type="application/rss+xml" title="Only Emacs posts" href="http://sachachua.com/blog/category/emacs/feed/" />
 	<link rel="alternate" type="application/rss+xml" title="Only Drupal posts" href="http://sachachua.com/blog/category/drupal/feed/" />
 	<link rel="alternate" type="application/rss+xml" title="Only sketches" href="http://sachachua.com/blog/category/sketches/feed/" />
+	<link rel="alternate" type="application/rss+xml" title="Weekly reviews" href="http://sachachua.com/blog/category/weekly/feed/" />
+	<link rel="alternate" type="application/rss+xml" title="Monthly reviews" href="http://sachachua.com/blog/category/monthly/feed/" />
 	<link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
 	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
