@@ -25,7 +25,7 @@ function recordOutboundLink(link, category, action) {
   }catch(err){}
 }
 </script>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=20130514" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=20130514-3" type="text/css" media="screen" />
 	<!--[if lte IE 6]>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/ie6.css" media="screen" />
 	<![endif]-->
@@ -51,9 +51,9 @@ function recordOutboundLink(link, category, action) {
      <h1><a href="<?php bloginfo('url'); ?>">sacha chua :: living an awesome life</a></h1>
 <ul class="links" style="margin-bottom: 0">
 <li><a href="/">Home</a></li>
-<li><a href="/blog/sketchnotes">Sketchnotes</a></li>
-<li><a href="/blog/speaking">Speaking</a></li>
 <li><a href="/blog/about/">About</a></li>
+<li><a href="/blog/sketchnotes">Sketchnotes</a></li>
+<li><a href="/blog/?random">Random</a></li>
 <li><a href="/blog/archive/">Archives</a></li>
 <li><a href="http://dl.dropbox.com/u/3968124/blog.html">Topical index</a></li>
 <li><a href="/blog/contact">Contact</a></li></ul>

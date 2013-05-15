@@ -16,7 +16,7 @@
 <div id="container">
 <div id="cse" style="width:100%;"></div>
 		<div class="navigation">
-			<?php previous_post_link('&laquo; %link') ?> - <?php next_post_link('%link &raquo;') ?>
+			<?php previous_post_link('&laquo; Older: %link') ?><br /><?php next_post_link('Newer: %link &raquo;') ?>
 		</div>
 	<?php if(have_posts()): ?><?php while(have_posts()):the_post(); ?>
 
@@ -55,7 +55,7 @@ the_ratings(); } ?>
 	<?php endwhile; ?>
 
 		<div class="navigation">
-			<?php previous_post_link('&laquo; %link') ?> -  <?php next_post_link('%link &raquo;') ?>
+			<?php previous_post_link('&laquo; Older: %link') ?><br /><?php next_post_link('Newer: %link &raquo;') ?>
 
 			<h2>Related posts</h2>
 <?php similar_posts(); ?>
