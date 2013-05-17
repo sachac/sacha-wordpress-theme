@@ -25,12 +25,13 @@ if (!have_posts()) {
 <div style="clear: both"></div>
   </div>
   <?php if(have_posts()): ?>
-<p>On this page:
+<div class="on-this-page">
+On this page:
     <ul>
 <?php while(have_posts()):the_post(); ?>
     <li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="entry-summary-title"><?php the_title(); ?></a></li>
     <?php endwhile; rewind_posts(); ?>
-    </ul></p>
+    </ul></div>
 <?php while(have_posts()):the_post();
  include('post.php'); 
  endwhile; ?>

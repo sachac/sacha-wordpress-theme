@@ -30,14 +30,11 @@ function recordOutboundLink(link, category, action) {
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/ie6.css" media="screen" />
 	<![endif]-->
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/compressed/css/960_16_10_10.css" type="text/css" />
-                                                        <link rel="alternate" type="application/rss+xml" title="Most items" href="<?php bloginfo('rss2_url'); ?>?cat=-550" />
-                                                        <link rel="alternate" type="application/rss+xml" title="Only monthly reviews" href="http://sachachua.com/blog/category/monthly/feed/" />
-                                                        <link rel="alternate" type="application/rss+xml" title="Only weekly reviews" href="http://sachachua.com/blog/category/weekly/feed/" />
+        <link rel="alternate" type="application/rss+xml" title="Feed (~daily)" href="http://feeds.sachachua.com/sachac" />
+	<link rel="alternate" type="application/rss+xml" title="Weekly reviews" href="http://feeds.sachachua.com/sachac-weekly" />
+	<link rel="alternate" type="application/rss+xml" title="Monthly reviews" href="http://feeds.sachachua.com/sachac-monthly" />
 	<link rel="alternate" type="application/rss+xml" title="Only Emacs posts" href="http://sachachua.com/blog/category/emacs/feed/" />
-	<link rel="alternate" type="application/rss+xml" title="Only Drupal posts" href="http://sachachua.com/blog/category/drupal/feed/" />
 	<link rel="alternate" type="application/rss+xml" title="Only sketches" href="http://sachachua.com/blog/category/sketches/feed/" />
-	<link rel="alternate" type="application/rss+xml" title="Weekly reviews" href="http://sachachua.com/blog/category/weekly/feed/" />
-	<link rel="alternate" type="application/rss+xml" title="Monthly reviews" href="http://sachachua.com/blog/category/monthly/feed/" />
 	<link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
 	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -66,8 +63,8 @@ function recordOutboundLink(link, category, action) {
 echo $numcomms . " comments<br />"; ?>
                                                         <?php if (function_exists('stcounter')) { echo stcounter('feedburner') . ' subscribers<br />'; } ?>
       <?php if (function_exists('stcounter')) { if (stcounter('twitter')) { echo stcounter('twitter') . ' on <a href="http://twitter.com/sachac">Twitter</a><br />'; } else { echo '<a href="http://twitter.com/sachac">Follow me on Twitter (@sachac)</a><br />'; } } ?>
-<a href="http://sachachua.com/blog/feed" onclick="javascript:recordOutboundLink(this, 'Subscription','/subscribe/rss/text');"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/subscribe.png" height="15" width="88" alt="Subscribe!" style="margin-bottom: 5px" border="0"/></a>
-   <a href="http://sachachua.com/blog/feed" onclick="javascript:recordOutboundLink(this, 'Subscription','/subscribe/rss/text');"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/rss-icon.png" height="20" alt="Feed reader" border="0" width="22"/></a>
+<a href="http://feeds.sachachua.com/sachac" onclick="javascript:recordOutboundLink(this, 'Subscription','/subscribe/rss/text');"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/subscribe.png" height="15" width="88" alt="Subscribe!" style="margin-bottom: 5px" border="0"/></a>
+   <a href="http://feeds.sachachua.com/sachac" onclick="javascript:recordOutboundLink(this, 'Subscription','/subscribe/rss/text');"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/rss-icon.png" height="20" alt="Feed reader" border="0" width="22"/></a>
    <a href="http://feedburner.google.com/fb/a/mailverify?uri=sachac&amp;loc=en_US"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/email.png" height="20" alt="E-mail" border="0" width="27" /></a><br />
 <?php if (!function_exists('stcounter')) { ?>
 <a href="http://twitter.com/sachac">Find me on Twitter</a><br />
