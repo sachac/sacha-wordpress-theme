@@ -1,5 +1,5 @@
 </div><!-- end of content area -->
-<div class="grid_6 rightbar">
+<div class="grid_5 rightbar">
 <ul>
     <li><?php get_search_form(true); ?></li>
     <li><a href="http://sachachua.com/blog/2009/12/what-can-i-help-you-learn-looking-for-mentees/">What can I help you learn?</a></li>

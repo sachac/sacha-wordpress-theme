@@ -6,7 +6,7 @@ if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
 # } else {
 # query_posts($query_string . '&posts_per_page=3'); 
 } ?>
-<div class="grid_10 content">
+<div class="grid_11 content">
 <div id="cse" style="width:100%;"></div>
     <div class="hfeed">
 <?php if ( is_search() ) { 

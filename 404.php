@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-   <div class="grid_10 content">
+   <div class="grid_11 content">
      <h2 class="center">Sorry! Page not found.</h2> 
 Please <a href="http://sachachua.com/blog/contact">tell me what you're looking for,</a> or try searching:
 
