@@ -14,7 +14,7 @@
 	<link rel="openid.delegate" href="http://sachachua.com/openid/MyID.config.php" />
 <link href="https://plus.google.com/113865527017476906160" rel="publisher" />
 <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /> 
-<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Open+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Loved+by+the+King|Open+Sans' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript">
 function recordOutboundLink(link, category, action) {
