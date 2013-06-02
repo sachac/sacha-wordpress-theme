@@ -289,7 +289,7 @@ pre { overflow: auto; width: 90%; padding: 5px 5px 5px 5px; -webkit-box-shadow: 
 
 
 .entry { line-height: 150%; }
-.postdate{ color: #aaa; }
+.postinfo { color: #aaa; }
 
 p.postmetadata{
 	color: #BFB8A1;

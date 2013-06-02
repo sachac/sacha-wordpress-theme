@@ -34,7 +34,8 @@
 <div class="grid_2">
 <div class="widget">
 <h2>Get the highlights as a PDF!</h2>
-<a href="http://www.lulu.com/shop/sacha-chua/stories-from-my-twenties-highlights-of-a-decade-of-blogging/ebook/product-20223728.html"><img width="100" src="/blog/wp-content/themes/sacha-v3/images/stories-from-my-twenties.png" alt="Stories from my Twenties: Highlights from a Decade of Blogging" /></a>
+<p><a href="http://www.lulu.com/shop/sacha-chua/stories-from-my-twenties-highlights-of-a-decade-of-blogging/ebook/product-20223728.html"><img width="100" src="/blog/wp-content/themes/sacha-v3/images/stories-from-my-twenties.png" alt="Stories from my Twenties: Highlights from a Decade of Blogging" /></a></p>
+<p><a href="http://db.tt/fGnql5ij">Free sample!</a></p>
 </div>
 
 </div>
