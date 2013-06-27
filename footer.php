@@ -40,5 +40,6 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 jquery(document).ready(function() {
    jquery('.sparkline').sparkline();
 });
+<!--googleon: index-->
 </body>
 </html>
