@@ -3,11 +3,13 @@
 <div id="cse" style="width:100%;"></div>
     <div class="hfeed">
   <div class="navigation">
-    <div class="left">
+ <span class="nav-left">
       <?php next_posts_link('&laquo; Older posts'); ?>
-    </div><div class="right">	
+    </span> - <span class="count">
+<?php echo $wp_query->found_posts . ' total post(s)' ?>
+</span><span class="nav-right">
       <?php previous_posts_link('Newer posts &raquo;'); ?>
-    </div>
+    </span>
 <div style="clear: both"></div>
   </div>
 <?php if (is_category()) {

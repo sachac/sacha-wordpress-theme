@@ -1018,3 +1018,4 @@ ul.featured_categories { padding: 0; margin: 0 }
 
 body .recent-comment { list-style-type: disc }
 .on-this-page { font-size: small }
+span.count { font-weight: normal }
