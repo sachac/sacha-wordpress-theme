@@ -15,7 +15,7 @@
 <? if (function_exists('the_ratings')) { 
 the_ratings(); } ?> 
  
-                            Short URL: <a href="<?php echo get_option('home'); ?>/p/<?php the_ID(); ?>"><?php echo get_option('home'); ?>/p/<?php the_ID(); ?></a>
+                            Short URL: <a href="http://sach.ac/p/<?php the_ID(); ?>">sach.ac/p/<?php the_ID(); ?></a>
 
 				<p class="postmetadata">
 <?php _e('Categories: '); the_category(', '); ?> <?php the_tags(); ?> 
