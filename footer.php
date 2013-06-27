@@ -31,5 +31,6 @@ I'd love to hear your thoughts, questions, and suggestions!</p>
 jquery(document).ready(function() {
    jquery('.sparkline').sparkline();
 });
+<!--googleon: index-->
 </body>
 </html>
