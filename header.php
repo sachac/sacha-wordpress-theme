@@ -39,6 +39,7 @@ function recordOutboundLink(link, category, action) {
 	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php wp_get_archives('type=monthly&format=link'); ?>
+        <?php if (is_singular()) wp_enqueue_script('comment-reply'); ?>
 	<?php wp_head(); ?>
 <script src="http://sachachua.com/blog/wp-content/themes/sacha-v3/jquery.sparkline.min.js" type="text/javascript"></script>
 </head>
