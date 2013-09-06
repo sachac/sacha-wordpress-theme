@@ -15,9 +15,8 @@
 <? if (function_exists('the_ratings')) { 
 the_ratings(); } ?> 
  
-                            Short URL: <a href="http://sach.ac/p/<?php the_ID(); ?>">sach.ac/p/<?php the_ID(); ?></a>
-
 				<p class="postmetadata">
+                            Short URL: <a href="http://sach.ac/p/<?php the_ID(); ?>">sach.ac/p/<?php the_ID(); ?></a><br />
 <?php _e('Categories: '); the_category(', '); ?> <?php the_tags(); ?> 
 <?php edit_post_link('Edit', ' &#124; ', ''); ?>
 <strong><?php comments_popup_link('Add Comment &#187;', '1 Comment

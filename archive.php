@@ -3,6 +3,20 @@
 <div id="cse" style="width:100%;"></div>
     <div class="hfeed">
   <div class="navigation">
+<?php if ($_REQUEST['order'] == 'asc') {
+echo '<a href="' . add_query_arg('order', 'desc') . '">Change view to newest posts first (default)</a><br />';
+ ?>
+<span class="nav-left">
+      <?php previous_posts_link('&laquo; Older posts'); ?>
+    </span> 
+- <span class="count">
+<?php echo $wp_query->found_posts . ' total post(s)' ?>
+</span><span class="nav-right">
+      <?php next_posts_link('Newer posts &raquo;'); ?>
+    </span>
+<div style="clear: both"></div>
+<?php } else {
+echo '<a href="' . add_query_arg('order', 'asc') . '">Change view to oldest posts first</a><br />'; ?>
  <span class="nav-left">
       <?php next_posts_link('&laquo; Older posts'); ?>
     </span> - <span class="count">
@@ -11,11 +25,14 @@
       <?php previous_posts_link('Newer posts &raquo;'); ?>
     </span>
 <div style="clear: both"></div>
+<?php } // endif
+?>
   </div>
 <?php if (is_category()) {
 if (category_description()) { 
 echo '<div class="category-description">' . category_description() . '</div>';
 } }?>
+
   <?php if(have_posts()): ?>
 <p>On this page:
     <ul>

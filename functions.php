@@ -19,4 +19,5 @@ function intermittent_date_header( $d='', $before='', $after='', $echo = true )
   echo $date_header;
 }
 add_theme_support( 'post-thumbnails' ); 
+add_theme_support( 'automatic-feed-links' ); 
 ?>
