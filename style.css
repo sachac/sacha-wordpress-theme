@@ -20,8 +20,8 @@ body, h1, h2, h3, h4, h5, h6, blockquote, p, form{
 
 h2 { margin-top: 0.83em; margin-bottom: 0.83em; line-height: 100%; }
 h1 { margin-top: 0.83em; margin-bottom: 0.83em; font-size: 25px; }
-h1, h2, h3 { font-family: 'Loved by the King', 'Georgia', cursive; font-size: 200%; word-spacing: -0.1em}
-
+h1, h2, h3 { font-family: 'Loved by the King', 'Georgia', cursive; word-spacing: -0.1em}
+h2 { font-size: 200% }
 body{
 	font-family: 'Open Sans', Calibri, Trebuchet MS, Verdana, Arial, Sans-Serif;
 	font-size: 12pt;
@@ -445,11 +445,6 @@ padding: 0;
 	padding: 10px 0 30px 0;
 }
 
-.commentmetadata{
-	color: #AAA;
-	padding: 20px 0;
-}
-
 .commentmetadata strong { 
 }
 
@@ -532,7 +527,7 @@ li { margin-bottom: 0.5em }
 .subscribe_text { background-image: url(images/subscribe.png); background-repeat: no-repeat; height: 20px; margin-bottom: 5px; }
 img#wpstats { visibility: hidden; height: 0px }
 .code {  color: #d8bfd8; }
-.comment {
+pre.comment {
                         /* font-lock-comment-face */
                         color: #ff7f24;
                               }
@@ -1019,3 +1014,33 @@ ul.featured_categories { padding: 0; margin: 0 }
 body .recent-comment { list-style-type: disc }
 .on-this-page { font-size: small }
 span.count { font-weight: normal }
+.highlight { background-color: #fff47D }
+.highlight-box { background-color: #fff47d; padding: 10px; border: 1px solid black; }
+.rightbar p { margin-top: 0; margin-bottom: 1em; }
+.rightbar h2 { margin-bottom: 0 }
+div.reply { margin-top: 1em }
+a.comment-reply-link { font-weight: bold;
+
+margin: 0;
+padding: 0;
+display: inline-block;
+background: #efefef;
+background: -moz-linear-gradient(top, #f7f7f7 0%, #efefef 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#efefef));
+background: -webkit-linear-gradient(top, #f7f7f7 0%,#efefef 100%);
+background: -o-linear-gradient(top, #f7f7f7 0%,#efefef 100%);
+background: -ms-linear-gradient(top, #f7f7f7 0%,#efefef 100%);
+background: linear-gradient(top, #f7f7f7 0%,#efefef 100%);
+border-radius: 3px;
+border: 1px solid #ddd !important;
+box-shadow: inset 0 1px 0 #fff;
+color: #000 !important;
+text-decoration: none;
+line-height: 1;
+padding: 10px;
+}
+.alignright { float: right }
+.wp-caption-text { font-size: small; font-style: italic }
+table.bordered, table.bordered th, table.bordered td { border: 1px solid gray; border-collapse: collapse; border-spacing: 0; padding: 2px }
+.number { text-align: right }
+.post h3 { font-size: 20pt; }
