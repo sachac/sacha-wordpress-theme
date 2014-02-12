@@ -27,10 +27,5 @@ I'd love to hear your thoughts, questions, and suggestions!</p>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <?php wp_footer(); ?>
 </div>
-<script type="text/javascript">
-jquery(document).ready(function() {
-   jquery('.sparkline').sparkline();
-});
-<!--googleon: index-->
 </body>
 </html>
