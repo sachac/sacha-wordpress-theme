@@ -19,8 +19,12 @@ body, h1, h2, h3, h4, h5, h6, blockquote, p, form{
 }
 
 h2 { margin-top: 0.83em; margin-bottom: 0.83em; line-height: 100%; }
+h2 a { text-decoration: none }
 h1 { margin-top: 0.83em; margin-bottom: 0.83em; font-size: 25px; }
-h1, h2, h3 { font-family: 'Loved by the King', 'Georgia', cursive; word-spacing: -0.1em}
+h1, h2, h3 { 
+font-family: 'Loved by the King', 'Georgia', cursive; word-spacing: -0.1em 
+
+}
 h2 { font-size: 200% }
 body{
 	font-family: 'Open Sans', Calibri, Trebuchet MS, Verdana, Arial, Sans-Serif;
@@ -1026,5 +1030,6 @@ padding: 10px;
 .alignright { float: right }
 .wp-caption-text { font-size: small; font-style: italic }
 table.bordered, table.bordered th, table.bordered td { border: 1px solid gray; border-collapse: collapse; border-spacing: 0; padding: 2px }
+table.spaced td { padding-bottom: 20px; padding-left: 3px; padding-right: 3px; }
 .number { text-align: right }
 .post h3 { font-size: 20pt; }

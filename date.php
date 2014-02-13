@@ -138,8 +138,8 @@ FROM $tableposts WHERE post_date >= FROM_UNIXTIME($next_display) AND post_status
 	<?php if(have_posts()): ?>
             <?php if (is_day()) {
       while (have_posts()) { the_post(); include 'post.php'; } } else { ?>
-<table class="bordered">
-<tr><th width="50">Date</th><th>Title</th><th>Comments</th><th>Categories</th></tr>
+<table class="spaced">
+<tr><th width="80">Date</th><th>Title</th><th>Comments</th><th>Categories</th></tr>
 	<?php while(have_posts()):the_post(); ?>
 
 			<tr><td><?php the_time('M j') ?></td><td><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></td>
