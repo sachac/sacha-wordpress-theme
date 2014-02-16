@@ -8,6 +8,8 @@
 
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />	
 	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats please -->
+<meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+
 
 	<link rel="openid.server" href="http://sachachua.com/openid/MyID.config.php" />
 <meta name="google-site-verification" content="ktFeZ-wntcsTZ0G2mnZF0uKejd6L9YKHrlyGOezAiQU" />
