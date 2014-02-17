@@ -1,8 +1,6 @@
-</div><!-- end of content area -->
-<div class="grid_5 rightbar nocontent robots-noindex">
+<div class="large-4 columns rightbar nocontent robots-noindex">
 <!--googleoff: index-->
 <ul>
-    <li><?php get_search_form(true); ?></li>
 <?php if (function_exists('clb_plus')) { clb_plus(); } ?>
 	<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar(1)) : else : ?>
 

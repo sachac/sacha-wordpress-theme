@@ -1,5 +1,6 @@
-<br />
-<div class="grid_16 footer">
+</div>
+<div class="row footer">
+<div class="small-12 columns">
 
   <p>Like this? <a href="http://feeds.feedburner.com/sachac" onclick="javascript:recordOutboundLink(this, 'Subscription','/subscribe/rss/text');return false;">
 Subscribe using your feed reader</a> or <a href="http://sachachua.com/blog/subscribe">your e-mail client</a>! 
@@ -19,13 +20,16 @@ I'd love to hear your thoughts, questions, and suggestions!</p>
 
 
   <p>
-    Copyright &#169; 2001-2012 Sacha Chua (<a href="mailto:sacha@sachachua.com">sacha@sachachua.com</a>). Please feel free to reuse content under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution Non-commercial Sharealike</a> license unless otherwise noted.
+    Copyright &#169; 2001-2014 Sacha Chua (<a href="mailto:sacha@sachachua.com">sacha@sachachua.com</a>). Please feel free to reuse or share content under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution</a> license unless otherwise noted. You can generally click on images for larger versions. Thanks for reading!
   </p>
 </div>
 
-
+  <script>
+    $(document).foundation();
+  </script>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <?php wp_footer(); ?>
+</div>
 </div>
 </body>
 </html>
