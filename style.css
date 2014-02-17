@@ -1034,3 +1034,4 @@ table.spaced td { padding-bottom: 20px; padding-left: 3px; padding-right: 3px; }
 .number { text-align: right }
 .post h3 { font-size: 20pt; }
 .similar-posts li { font-weight: normal }
+.posts { margin-bottom: 2em }
