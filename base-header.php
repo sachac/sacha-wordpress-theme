@@ -29,19 +29,17 @@ function recordOutboundLink(link, category, action) {
 }
 </script>
         <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /> 
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/compressed/css/960_16_10_10.css" type="text/css" />
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/foundation/css/foundation.min.css" type="text/css" />
         <link href='http://fonts.googleapis.com/css?family=Loved+by+the+King|Open+Sans' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" media="screen" />
 	<!--[if lte IE 6]>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/ie6.css" media="screen" />
 	<![endif]-->
-        <link rel="alternate" type="application/rss+xml" title="Feed (~daily)" href="http://feeds.sachachua.com/sachac" />
-	<link rel="alternate" type="application/rss+xml" title="Weekly reviews" href="http://feeds.sachachua.com/sachac-weekly" />
-	<link rel="alternate" type="application/rss+xml" title="Monthly reviews" href="http://feeds.sachachua.com/sachac-monthly" />
+        <link rel="alternate" type="application/rss+xml" title="Feed (~daily)" href="http://sachachua.com/blog/feed" />
+	<link rel="alternate" type="application/rss+xml" title="Weekly reviews" href="http://sachachua.com/blog/category/weekly/feed" />
+	<link rel="alternate" type="application/rss+xml" title="Monthly reviews" href="http://sachachua.com/blog/category/monthly/feed" />
+	<link rel="alternate" type="application/rss+xml" title="Yearly reviews" href="http://sachachua.com/blog/category/yearly/feed" />
 	<link rel="alternate" type="application/rss+xml" title="Only Emacs posts" href="http://sachachua.com/blog/category/emacs/feed/" />
-	<link rel="alternate" type="application/rss+xml" title="Only sketches" href="http://sachachua.com/blog/category/sketches/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Only sketches" href="http://sachachua.com/blog/category/sketches/feed/" />
 	<link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
 	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
