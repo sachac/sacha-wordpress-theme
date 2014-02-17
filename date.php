@@ -20,11 +20,15 @@
     $format = 'F j, Y';
     $url_format = 'Y/n/j';
   }
+  $prev_text = date($url_format, $prev_display);
+  $next_text = date($url_format, $next_display);
+  $prev_link = site_url($prev_text);
+  $next_link = site_url($next_text);
   $paged = get_query_var('paged');
   $title = date($format, $display);
 $last_month = null;
 if ($_GET['bulk']) { 
-$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=1000'); ?>
+$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=-1'); ?>
 <html><head><link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" /><title><?php print $title ?></title><body>
 <div class="bulk">
 <h1 class="bulk_title"><?php print $title ?></h1>
@@ -57,7 +61,7 @@ while(have_posts()) { the_post();
 <?php
 }
 else if ($_GET['list']) {
-$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=1000'); 
+$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=-1'); 
 print '<ul>';
 	 while(have_posts()) { the_post(); ?>
          <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></li>
@@ -66,7 +70,7 @@ print '<ul>';
 print "</ul>"; 
 }
 else if ($_GET['org']) {
-$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=1000'); 
+$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=-1'); 
 print '<pre>';
 	 while(have_posts()) { the_post(); ?>
 - [[<?php the_permalink(); ?>][<?php the_title(); ?>]]
@@ -75,7 +79,7 @@ print '<pre>';
 print '</pre>';
 }
 else if ($_GET['table']) {
-$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=1000'); 
+$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=-1'); 
 print '<table>';
 	 while(have_posts()) { the_post(); ?>
 <tr><td><?php the_ID(); ?></td><td><?php the_title(); ?></td><td><?php the_permalink(); ?></td><td><?php echo strlen(get_the_content()); ?></td><td><?php the_time("Y-n-j G:i"); ?></td></tr>
@@ -90,37 +94,18 @@ else {
 <div id="cse" style="width:100%;"></div>
 <?php 
   $posts = query_posts($query_string . '&orderby=date&order=desc&posts_per_page=-1'); 
-   
-  /*if ($paged < 2) { // No previous pages; navigate by date instead
-    $past = $wpdb->get_row("SELECT UNIX_TIMESTAMP(MAX(post_date)) AS post_date
-FROM $tableposts WHERE post_date <= FROM_UNIXTIME($prev_display) AND post_status='publish'");
-    if ($past->post_date) {
-      $prev_text = '&laquo; ' . date($format, $past->post_date);
-      $prev_link = get_bloginfo('url') . '/'
-        . date($url_format, $past->post_date);
-    }
-  }
-  if ($paged >= $wp_query->max_num_pages) { // No next pages
-    $future = $wpdb->get_row("SELECT UNIX_TIMESTAMP(MIN(post_date)) AS post_date
-FROM $tableposts WHERE post_date >= FROM_UNIXTIME($next_display) AND post_status='publish'");
-    if ($future->post_date) {
-      $next_text = date($format, $future->post_date) . ' &raquo;';
-      $next_link = get_bloginfo('url') . '/'
-        . date($url_format, $future->post_date);
-    }
-  }*/
   ?>
   <div class="navigation">
     <div class="left">
       <?php if ($prev_text) { ?>
-        <a href="<?php print $prev_link ?>"><?php print $prev_text ?></a>
+        &laquo; <a href="<?php print $prev_link ?>"><?php print $prev_text ?></a>
       <?php } else { ?>
         <?php previous_posts_link('&laquo; Older posts'); ?>
       <?php } ?>
     </div>
     <div class="right">
       <?php if ($next_text) { ?>
-        <a href="<?php print $next_link ?>"><?php print $next_text ?></a>
+        <a href="<?php print $next_link ?>"><?php print $next_text ?></a> &raquo;
       <?php } else { ?>
         <?php next_posts_link('Newer posts &raquo;'); ?>
       <?php } ?>
