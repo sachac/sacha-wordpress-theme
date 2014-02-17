@@ -1,5 +1,5 @@
 <?php include('base-header.php'); ?>
-<div class="fixed sticky contain-to-grid top-menu">
+<div class="sticky contain-to-grid top-menu">
   <nav class="top-bar">
     <ul class="links">
       <li><a id="home" class="replace home-design" href="/">Home</a></li>

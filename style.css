@@ -901,21 +901,21 @@ ul.featured_categories { padding: 0; margin: 0 }
 
 .replace { white-space: nowrap; overflow: hidden; text-indent: 100%; }
 
-.home-design { background: url(images/design.png) 0 0 no-repeat; }
+.home-design { background: url(images/design-2.png) 0 0 no-repeat; }
 
 
 .header h1 { margin: 0 }
 .top-bar .links, .header .links { margin: 0 }
-.top-bar .links .replace:hover { background: url(images/design-highlighted.png) 0 0 no-repeat; }
+.top-bar .links .replace:hover { background: url(images/design-highlighted-2.png) 0 0 no-repeat; }
 .top-bar { background-color: #fff; z-index: 9999; }
 .top-bar .links li { display: inline-block; height: 33px; margin: 0 }
 .top-bar .links li a { height: 33px; margin-bottom: -9px }
 .top-menu { background: #fff; border-bottom: 1px solid #ccc }
 
-#searchsubmit:hover { background: url(images/design-highlighted.png) -91px -71px no-repeat  }
+#searchsubmit:hover { background: url(images/design-highlighted-2.png) -91px -71px no-repeat  }
 
 #searchsubmit { 
-  background: url(images/design.png) -91px -71px no-repeat;
+  background: url(images/design-2.png) -91px -71px no-repeat;
   width: 30px; height: 33px;
   overflow: hidden;
   text-indent: 30px;
@@ -979,11 +979,11 @@ table.spaced td { padding-bottom: 20px; padding-left: 3px; padding-right: 3px; }
 #contact { width: 30px; background-position: -630px -105px; display: inline-block }
 #resources { width: 34px; background-position: -127px -71px; display: inline-block }
 
-.top-bar { height: auto; }
-.header { margin-top: 60px; }
+/* .top-bar { height: auto; } */
+/* .header { margin-top: 60px; } */
 @media screen and (min-width: 420px) {  /* top menu stops wrapping */
-  .top-bar { height: 45px; }
-  .header { margin-top: 50px; }
+  .top-bar { height: 45px; } 
+/*  .header { margin-top: 50px; } */
 } 
 
 @media screen and (max-width: 40em) { } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
@@ -1000,7 +1000,7 @@ table.spaced td { padding-bottom: 20px; padding-left: 3px; padding-right: 3px; }
 }
 @media screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   /* Full text */
   #home { width: 93px; }
   #about { width: 86px; }
@@ -1032,4 +1032,3 @@ table.spaced td { padding-bottom: 20px; padding-left: 3px; padding-right: 3px; }
 #searchform label { display: none }
 #searchform #s { display: inline-block; height: 31px; margin: 0; width: 30px }
 
-#wpadminbar { bottom: 0 }
