@@ -5,9 +5,9 @@
       <li><a id="home" class="replace home-design" href="/">Home</a></li>
       <li><a id="about" class="replace home-design" href="/blog/about/">About</a></li>
       <li><a id="resources" class="replace home-design" href="/blog/resources">Resources</a></li>
-      <li><a id="index" class="replace home-design" href="http://dl.dropbox.com/u/3968124/blog.html">Index</a></li>
+      <li><a id="index" class="replace show-for-medium-up home-design" href="http://dl.dropbox.com/u/3968124/blog.html">Index</a></li>
       <li><a id="archives" class="replace home-design" href="/blog/archive/">Archives</a></li>
-      <li><a id="random" class="replace home-design" href="/blog/?random">Random</a></li>
+      <li><a id="random" class="replace show-for-medium-up home-design" href="/blog/?random">Random</a></li>
       <li><a id="contact" class="replace home-design" href="/blog/contact">Contact</a></li>
       <li><?php get_search_form(true); ?></li>
     </ul>
