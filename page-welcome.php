@@ -1,7 +1,8 @@
 <?php 
 /* Template Name: Welcome page */
 include('base-header.php'); ?>
-<div class="grid_11 content">
+<div class="row">
+<div class="large-8 columns content">
 <div id="cse" style="width:100%;"></div>
     <div class="hfeed">
     <?php if(have_posts()): ?>
@@ -31,10 +32,5 @@ include('base-header.php'); ?>
 
 </div><!--hfeed-->
 </div><!--content-->
-<div class="grid_5 sidebar">
-<?php the_widget('WP_Widget_Search', array('title' => '')); ?> 
-<?php the_widget('WP_Widget_Recent_Posts', array('title' => __('Latest posts'),
-'number' => 5)); ?> 
-<?php the_widget('Jetpack_Top_Posts_Widget'); ?> 
-
-</div><?php get_footer() ?>
+<?php get_sidebar() ?>
+<?php get_footer() ?>

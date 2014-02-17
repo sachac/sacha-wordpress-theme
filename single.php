@@ -12,8 +12,7 @@
   exit;
 } ?>
 <?php get_header(); ?> 
-<div class="grid_11 content">
-<div id="container">
+<div class="small-12 large-8 content columns">
 <div id="cse" style="width:100%;"></div>
 		<div class="navigation">
 			<?php previous_post_link('&laquo; Older: %link') ?><br /><?php next_post_link('Newer: %link &raquo;') ?>

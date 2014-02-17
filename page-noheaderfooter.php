@@ -1,7 +1,8 @@
 <?php 
 /* Template Name: No header, has footer */
 include('base-header.php'); ?>
-<div class="grid_16 content">
+<div class="row">
+<div class="large-12 columns content">
 <div id="cse" style="width:100%;"></div>
     <div class="hfeed">
     <?php if(have_posts()): ?>
@@ -31,4 +32,5 @@ include('base-header.php'); ?>
 
 </div><!--hfeed-->
 </div><!--content-->
+</div><!--row-->
 <?php get_footer() ?>

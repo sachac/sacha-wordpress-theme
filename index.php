@@ -23,14 +23,11 @@ if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
       <div style="clear: both"></div>
     </div>
     <?php if(have_posts()): ?>
-      <div class="on-this-page">
-        On this page:
-        <ul>
-          <?php while(have_posts()):the_post(); ?>
-          <li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="entry-summary-title"><?php the_title(); ?></a></li>
-          <?php endwhile; rewind_posts(); ?>
-        </ul>
-      </div>
+      <div class="on-this-page">On this page:<ul>
+        <?php while(have_posts()):the_post(); ?>
+        <li><a href="#post-<?php the_ID(); ?>" title="<?php the_title(); ?>" class="entry-summary-title"><?php the_title(); ?></a></li>
+        <?php endwhile; rewind_posts(); ?>
+      </ul></div>
       <?php while(have_posts()):the_post();
          include('post.php'); 
       endwhile; ?>

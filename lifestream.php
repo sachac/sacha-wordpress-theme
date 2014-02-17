@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="grid_11 content">
+<div class="large-8 columns content">
     <div class="hfeed">
   <?php if(have_posts()): ?>
 <?php while(have_posts()):the_post(); ?>

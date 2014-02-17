@@ -28,69 +28,65 @@
   $title = date($format, $display);
 $last_month = null;
 if ($_GET['bulk']) { 
-$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=-1'); ?>
-<html><head><link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" /><title><?php print $title ?></title><body>
-<div class="bulk">
-<h1 class="bulk_title"><?php print $title ?></h1>
-<?php if (have_posts()) {
-   // Print regular, for export
-?>
-<ul>
-<?php
-	 while(have_posts()) { the_post(); ?>
-<li><a href="#post-<?php the_ID(); ?>"><?php the_title(); ?></a></li>
-         <?php } ?>
-</ul>
-<?php 
-         rewind_posts();
-while(have_posts()) { the_post();
-  if (is_year() && get_the_time('F Y') != $last_month) {
-    print '<h1 class="month">' . get_the_time('F Y') . '</h1>';
-    $last_month = get_the_time('F Y');
+  $posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=-1'); ?>
+  <html><head><link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" /><title><?php print $title ?></title><body>
+    <div class="bulk">
+    <h1 class="bulk_title"><?php print $title ?></h1>
+    <?php if (have_posts()) {
+       // Print regular, for export
+    ?>
+    <ul>
+    <?php
+             while(have_posts()) { the_post(); ?>
+    <li><a href="#post-<?php the_ID(); ?>"><?php the_title(); ?></a></li>
+             <?php } ?>
+    </ul>
+    <?php 
+             rewind_posts();
+    while(have_posts()) { the_post();
+      if (is_year() && get_the_time('F Y') != $last_month) {
+        print '<h1 class="month">' . get_the_time('F Y') . '</h1>';
+        $last_month = get_the_time('F Y');
+      }
+      ?>
+
+             <h2 class="title" id="post-<?php the_ID(); ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    <div class="permalink"><a href="<?php echo get_option('home'); ?>/p/<?php the_ID(); ?>"><?php echo get_option('home'); ?>/p/<?php the_ID(); ?></a></div>
+             <div class="date"><?php the_time('F j, Y') ?> - Categories: <?php the_category(', ') ?></div>
+             <div class="body">
+                <?php the_content() ?>
+             </div>
+    <?php }} ?>
+    </div></body></html>
+  <?php
   }
-  ?>
-    
-         <h2 class="title" id="post-<?php the_ID(); ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-<div class="permalink"><a href="<?php echo get_option('home'); ?>/p/<?php the_ID(); ?>"><?php echo get_option('home'); ?>/p/<?php the_ID(); ?></a></div>
-         <div class="date"><?php the_time('F j, Y') ?> - Categories: <?php the_category(', ') ?></div>
-         <div class="body">
-            <?php the_content() ?>
-         </div>
-<?php }} ?>
-</div></body></html>
-<?php
-}
 else if ($_GET['list']) {
-$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=-1'); 
-print '<ul>';
-	 while(have_posts()) { the_post(); ?>
-         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></li>
-<?php
-}
-print "</ul>"; 
+  $posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=-1'); 
+  print '<ul>';
+  while(have_posts()) { the_post(); ?><li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></li><?php }
+  print '</ul>'; 
 }
 else if ($_GET['org']) {
-$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=-1'); 
-print '<pre>';
-	 while(have_posts()) { the_post(); ?>
+  $posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=-1'); 
+  print '<pre>';
+  while(have_posts()) { the_post(); ?>
 - [[<?php the_permalink(); ?>][<?php the_title(); ?>]]
-<?php
-}
-print '</pre>';
+  <?php
+  }
+  print '</pre>';
 }
 else if ($_GET['table']) {
-$posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=-1'); 
-print '<table>';
-	 while(have_posts()) { the_post(); ?>
-<tr><td><?php the_ID(); ?></td><td><?php the_title(); ?></td><td><?php the_permalink(); ?></td><td><?php echo strlen(get_the_content()); ?></td><td><?php the_time("Y-n-j G:i"); ?></td></tr>
-<?php
-}
-print '</table>';
+  $posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=-1'); 
+  print '<table>';
+           while(have_posts()) { the_post(); ?>
+  <tr><td><?php the_ID(); ?></td><td><?php the_title(); ?></td><td><?php the_permalink(); ?></td><td><?php echo strlen(get_the_content()); ?></td><td><?php the_time("Y-n-j G:i"); ?></td></tr>
+  <?php
+  }
+  print '</table>';
 }
 else { 
   get_header(); ?>
-<div class="grid_11 content">
-<div id="container">
+<div class="small-12 large-8 content columns">
 <div id="cse" style="width:100%;"></div>
 <?php 
   $posts = query_posts($query_string . '&orderby=date&order=desc&posts_per_page=-1'); 

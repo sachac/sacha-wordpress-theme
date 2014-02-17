@@ -1,5 +1,5 @@
 
-		<div class="post hentry">
+		<div class="post hentry" id="post-<?php the_ID(); ?>">
 
 			<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="entry-title"><?php the_title(); ?></a></h2>
 

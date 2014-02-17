@@ -1,5 +1,5 @@
 </div>
-<div class="row footer">
+<footer class="row footer">
 <div class="small-12 columns">
 
   <p>Like this? <a href="http://feeds.feedburner.com/sachac" onclick="javascript:recordOutboundLink(this, 'Subscription','/subscribe/rss/text');return false;">
@@ -30,6 +30,6 @@ I'd love to hear your thoughts, questions, and suggestions!</p>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <?php wp_footer(); ?>
 </div>
-</div>
+</footer>
 </body>
 </html>

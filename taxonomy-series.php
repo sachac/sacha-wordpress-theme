@@ -7,7 +7,7 @@ if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
 # query_posts($query_string . '&posts_per_page=3');
 } ?>
 
-<div class="grid_11 content">
+<div class="small-12 large-8 content columns">
   <div id="cse" style="width:100%;"></div>
     <div class="hfeed">
       <div class="navigation">
@@ -23,12 +23,11 @@ echo '<div class="category-description">' . category_description() . '</div>';
 } }?>
 
   <?php if(have_posts()): ?>
-<p>On this page:
-    <ul>
-<?php while(have_posts()):the_post(); ?>
-    <li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="entry-summary-title"><?php the_title(); ?></a></li>
-    <?php endwhile; rewind_posts(); ?>
-    </ul></p>
+      <div class="on-this-page">On this page:<ul>
+        <?php while(have_posts()):the_post(); ?>
+        <li><a href="#post-<?php the_ID(); ?>" title="<?php the_title(); ?>" class="entry-summary-title"><?php the_title(); ?></a></li>
+        <?php endwhile; rewind_posts(); ?>
+      </ul></div>
 <div class="posts">
 <?php while(have_posts()):the_post();
  include('post.php'); ?>
@@ -51,7 +50,7 @@ echo '<div class="category-description">' . category_description() . '</div>';
 	<?php endif; ?>
 
 </div>
-
+</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer() ?>

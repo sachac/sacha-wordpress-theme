@@ -36,10 +36,17 @@ if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
     ?>
   </div>
   <div class="hfeed">
-    
-    <?php if (is_category() && category_description()) { 
-      echo '<div class="category-description">' . category_description() . '</div>';
-    } ?>
+    <header class="archive-header">
+  <h1 class="archive-title"><?php printf( 'Category Archives: %s', single_cat_title( '', false ) ); ?></h1>
+
+      <?php
+              // Show an optional term description.
+              $term_description = term_description();
+              if ( ! empty( $term_description ) ) :
+                      printf( '<div class="taxonomy-description">%s</div>', $term_description );
+              endif;
+      ?>
+    </header><!-- .archive-header -->
     <?php if(have_posts()): ?>
       <div class="on-this-page">On this page:<ul>
         <?php while(have_posts()):the_post(); ?>

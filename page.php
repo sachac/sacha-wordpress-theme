@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="grid_11 content">
+<div class="large-8 columns content">
 <div id="cse" style="width:100%;"></div>
     <div class="hfeed">
   <?php if(have_posts()): ?>

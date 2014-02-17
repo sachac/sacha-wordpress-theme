@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-   <div class="grid_11 content">
+ <div class="content columns large-8 small-12">
      <h2 class="center">Sorry! Page not found.</h2> 
 Please <a href="http://sachachua.com/blog/contact">tell me what you're looking for,</a> or try searching:
 
@@ -19,5 +19,6 @@ echo trim( $query );
 <input type="submit" value="Find" />
 </fieldset>
 </form>
+</div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

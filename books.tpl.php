@@ -4,7 +4,7 @@ Template Name: Books
 */
 get_header();
 ?>
-<div class="hfeed grid_16">
+<div class="hfeed columns small-12">
   <?php if(have_posts()): ?>
 <?php while(have_posts()):the_post(); ?>
 <div class="entry">

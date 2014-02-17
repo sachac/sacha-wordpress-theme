@@ -3,7 +3,7 @@
 Template Name: Work
 */
 get_header(); ?>
-<div class="hfeed grid_16">
+<div class="hfeed columns large-12">
 <?php while (have_posts()) {
   the_post();
   print '<h1>';

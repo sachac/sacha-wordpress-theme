@@ -197,8 +197,6 @@ textarea#comment {
 	font-style: normal; 
 	color: #900; 
 	margin: 25px auto 10px 30px;
-	border-top: 1px dotted #CCC;
-	border-bottom: 1px dotted #CCC;
 }
 
 /*******************
@@ -223,12 +221,10 @@ div.title{
 /*******************
 ---------Post-------
 *******************/
-.post { border-top: 1px solid lightgray }
 .post h2{
 	text-transform: normal;
         text-shadow: #bbb 1px 1px 1px;
 }
-body div.sharedaddy div.sd-block { border-top: 0 }
 
 pre { overflow: auto; width: 90%; padding: 5px 5px 5px 5px; -webkit-box-shadow: #aaa 1px 1px 2px; border: 1px solid #aaa }
 
@@ -265,7 +261,6 @@ h2.archive_head{
 	letter-spacing: normal !important; 
 	margin: 0 0 1.8em 10px !important; 
 	padding: 0.4em 5px !important; 
-	border-bottom: 1px dotted #CCC; 
 	background: none; 
 }
 
@@ -970,7 +965,7 @@ table.spaced td { padding-bottom: 20px; padding-left: 3px; padding-right: 3px; }
 .posts { margin-bottom: 2em }
 
 .on-this-page li { margin-bottom: 0 }
-
+.on-this-page {margin-top: 0 }
 .stats li { list-style-type: none; margin-bottom: 0; display: inline-block; color: #999; font-size: small }
 .header .site-title, .header .name { background: none; color: black; overflow: visible; text-indent: 0; }
 .header { text-align: center }

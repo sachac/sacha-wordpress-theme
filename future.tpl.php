@@ -4,7 +4,7 @@ Template Name: Future
 */
 get_header();
 ?>
-<div class="hfeed grid_16">
+<div class="hfeed large-12 columns">
 <h3>Future topics</h3>
 
 I'm trying out <a href="http://sachachua.com/wp/2009/12/the-value-of-a-bottleneck/">limiting my blog to one post a day</a>, published between
