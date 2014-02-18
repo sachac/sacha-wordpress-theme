@@ -7,7 +7,6 @@ $oddcomment = 'alt';
 ?>
 
 <!-- You can start editing here. -->
-<div id="respond"></div>
 <?php if (have_comments()) : ?>
 	<h3 id="comments"><?php comments_number('No responses', 'One response', '% responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 

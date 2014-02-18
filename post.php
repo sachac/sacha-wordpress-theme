@@ -31,3 +31,4 @@ the_ratings(); } ?>
 			</div>
 
 		</div>
+<div id="respond"></div>
