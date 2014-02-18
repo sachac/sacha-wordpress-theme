@@ -25,7 +25,7 @@ if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
     <?php if(have_posts()): ?>
       <div class="on-this-page">On this page:<ul>
         <?php while(have_posts()):the_post(); ?>
-        <li><a href="#post-<?php the_ID(); ?>" title="<?php the_title(); ?>" class="entry-summary-title"><?php the_title(); ?></a></li>
+  <li><a href="#post-<?php the_ID(); ?>" title="<?php the_title(); ?>" class="entry-summary-title"><?php the_title(); ?></a><span class="comments"><?php comments_number('', ' - (1)', ' - (%)') ?></span></li>
         <?php endwhile; rewind_posts(); ?>
       </ul></div>
       <?php while(have_posts()):the_post();
