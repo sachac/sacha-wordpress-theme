@@ -71,7 +71,7 @@ else if ($_GET['org']) {
   print '<pre>';
   while(have_posts()) { the_post(); ?>
 - [[<?php the_permalink(); ?>][<?php the_title(); ?>]]
-  <?php
+<?php
   }
   print '</pre>';
 }
