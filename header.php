@@ -16,7 +16,7 @@
 <div class="row header">
   <div class="large-8 columns">
     <h1>
-      <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/small-logo.png" width="640" height="116" alt="Living an Awesome Life - Sacha Chua"></a>
+      <a href="<?php bloginfo('url'); ?>"><img id="site-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/small-logo.png" width="640" height="116" alt="Living an Awesome Life - Sacha Chua"></a>
     </h1>
   </div>
   <div class="stats large-4 columns">
