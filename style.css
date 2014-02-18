@@ -1025,3 +1025,5 @@ table.spaced td { padding-bottom: 20px; padding-left: 3px; padding-right: 3px; }
 #searchform label { display: none }
 #searchform #s { display: inline-block; height: 31px; margin: 0; width: 30px }
 
+.on-this-day .comments { font-size: x-small; color: gray; }
+.on-this-day .comments a { color: gray }
