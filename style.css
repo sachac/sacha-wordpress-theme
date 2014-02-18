@@ -1005,7 +1005,6 @@ table.spaced td { padding-bottom: 20px; padding-left: 3px; padding-right: 3px; }
   #resources { width: 136px; }
 }
 @media screen and (min-width: 64.063em) { /* min-width 1025px, large screens */
-  .header { text-align: left }
   .header .links { left: 81px; position: relative; margin-left: 0 }
   .stats li { display: list-item; margin: 0;  }
   .stats ul { margin-left: 0 }
