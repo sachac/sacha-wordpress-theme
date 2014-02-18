@@ -30,7 +30,7 @@ function recordOutboundLink(link, category, action) {
 </script>
         <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /> 
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/foundation/css/foundation.min.css" type="text/css" />
-        <link href='http://fonts.googleapis.com/css?family=Loved+by+the+King|Open+Sans' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" media="screen" />
 	<!--[if lte IE 6]>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/ie6.css" media="screen" />
