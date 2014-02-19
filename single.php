@@ -55,9 +55,6 @@ the_ratings(); } ?>
 
 		<div class="navigation">
 			<?php previous_post_link('&laquo; Older: %link') ?><br /><?php next_post_link('Newer: %link &raquo;') ?>
-
-			<h2>Related posts</h2>
-<?php similar_posts(); ?>
 </div>
 
 	<?php else: ?>
