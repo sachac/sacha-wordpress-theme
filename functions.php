@@ -83,5 +83,3 @@ function modify_url($mod)
     return $url; 
 } 
 
-?>
-

@@ -69,9 +69,6 @@ the_ratings(); } ?>
 		</div>
 
 	<?php endif; ?>
-<h2>On This Day...</h2>
-<?php OTDList() ?>
-
 </div>
 <?php get_sidebar(); ?>
 

@@ -279,7 +279,6 @@ h2.archive_head{
 
 .rightbar ul ul li{
 	padding: 0;
-	margin: 0 0 0 0;
 	line-height: 24px;
 }
 
@@ -1027,3 +1026,5 @@ table.spaced td { padding-bottom: 20px; padding-left: 3px; padding-right: 3px; }
 
 .on-this-day .comments { font-size: x-small; color: gray; }
 .on-this-day .comments a { color: gray }
+
+.similar-posts .excerpt { color: #ccc }
