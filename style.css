@@ -885,7 +885,13 @@ body .ngg-gallery-thumbnail { text-align: left }
 .org-diff-indicator-changed {
 }
 .org-diff-indicator-removed { }
-.featured_resources li { display: inline-block; width: 100px }
+
+.featured_resources .thumbnail { text-align: center }
+.featured_resources li { list-style-type: none; margin-top: 20px; }
+.featured_resources .description { color: gray }
+.featured_resources .resource-title { text-align: center; font-weight: bold }
+ul.featured_resources { margin-left: 0; padding-left: 0 }
+
 .featured_categories li { display: inline-block }
 ul.featured_categories { padding: 0; margin: 0 }
 
