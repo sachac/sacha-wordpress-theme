@@ -31,7 +31,7 @@
 
 				<?php the_content(); ?>
 
-<? if (function_exists('the_ratings')) {
+<?php if (function_exists('the_ratings')) {
 the_ratings(); } ?>
 
 
@@ -56,8 +56,10 @@ the_ratings(); } ?>
 		<div class="navigation">
 			<?php previous_post_link('&laquo; Older: %link') ?><br /><?php next_post_link('Newer: %link &raquo;') ?>
 
+<?php if (function_exists('similar_posts')) { ?>
 			<h2>Related posts</h2>
 <?php similar_posts(); ?>
+<?php } ?>
 </div>
 
 	<?php else: ?>
