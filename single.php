@@ -41,7 +41,6 @@ the_ratings(); } ?>
 				<p class="postmetadata">
 <?php _e('More posts about:'); ?> <?php the_category(', ') ?> <?php the_tags(); ?> <?php edit_post_link('Edit', ' &#124; ', ''); ?> // <strong><?php comments_popup_link('Add Comment &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></strong> 				
 				</p>
-                            Short URL: <a href="http://sach.ac/p/<?php the_ID(); ?>">sach.ac/p/<?php the_ID(); ?></a>
 
 			</div>
 
