@@ -1034,6 +1034,22 @@ table.spaced td { padding-bottom: 20px; padding-left: 3px; padding-right: 3px; }
 .on-this-day .comments a { color: gray }
 
 .similar-posts .excerpt { color: #ccc }
+
 .authors-note { color: #999; border: 1px solid #999; padding: 10px  }
 .postdate abbr.published { font-size: 100%; color: #aaa; border-bottom: 0; cursor: inherit; }
 
+/*SVG CSS */
+
+object{
+    pointer-events: none;
+}
+
+.anchor-svg {
+	display: inline-block;
+	margin-left: 14px;
+}
+
+.anchor-png {
+	height: 37px;
+	width: 32px;
+}
