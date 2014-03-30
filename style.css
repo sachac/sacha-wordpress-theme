@@ -909,7 +909,7 @@ ul.featured_categories { padding: 0; margin: 0 }
 
 .header h1 { margin: 0 }
 .top-bar .links, .header .links { margin: 0 }
-.top-bar .links .replace:hover { background: url(images/design-highlighted-2.png) 0 0 no-repeat; }
+.home-design:hover { background: url(images/design-highlighted-2.png) 0 0 no-repeat; }
 .top-bar { background-color: #fff; z-index: 9999; }
 .top-bar .links li { display: inline-block; height: 33px; margin: 0 }
 .top-bar .links li a { height: 33px; margin-bottom: -9px }
@@ -1044,3 +1044,21 @@ table.spaced td { padding-bottom: 20px; padding-left: 3px; padding-right: 3px; }
 .org-src-container { margin-bottom: 1rem }
 code { color: #333 }
 
+.pull-quote {
+padding: 10px;
+float: right;
+width: 250px;
+margin-top: 10px;
+margin-bottom: 10px;
+margin-left: 20px;
+border-top-width: 2px;
+border-bottom-width: 2px;
+border-top-style: solid;
+border-bottom-style: solid;
+border-top-color: #694e1c;
+border-bottom-color: #694e1c;
+font-size: 21px;
+line-height: 1.25em;
+text-align: left;
+font-weight: normal;
+}
