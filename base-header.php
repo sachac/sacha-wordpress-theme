@@ -5,7 +5,7 @@
 <script src="<?php bloginfo('stylesheet_directory'); ?>/foundation/js/foundation.min.js" type="text/javascript"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-	<title><?php wp_title('&raquo;', 1, 'right'); bloginfo('name'); ?></title>
+	<title><?php wp_title('-', 1, 'right'); ?></title>
 
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />	
 	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats please -->
