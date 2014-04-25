@@ -1062,3 +1062,5 @@ line-height: 1.25em;
 text-align: left;
 font-weight: normal;
 }
+
+th.right, td.right { float: none !important; text-align: right }
