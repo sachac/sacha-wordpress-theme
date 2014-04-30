@@ -13,11 +13,6 @@ Author: Sacha Chua
 }
 /* END RECAPTCHA STYLING */
 
-body, h1, h2, h3, h4, h5, h6, blockquote {
-	margin: 0;
-	padding: 0;
-        color: #500000;
-}
 body { font-size: 1rem; line-height: 1.6 }
 ul, .entry ul { list-style-type: circle }
 ul, ol, dl { margin-left: 3em }
@@ -44,11 +39,6 @@ h1{
         text-shadow: #bbb 1px 1px 1px;
         
 }
-
-h3{
-	padding: 25px 0 5px 0;
-}
-
 
 a:link{
 	color:#900;
@@ -236,10 +226,6 @@ p.postmetadata{
 	color: #BFB8A1;
 	margin: 1en 0 0 0;
 	padding: 5px 0 0 0;
-}
-
-p.postmetadata strong{
-	float: right;
 }
 
 /* This is the link at the bottom of a post which lets you go to the next or previous post */
@@ -1064,3 +1050,17 @@ font-weight: normal;
 }
 
 th.right, td.right { float: none !important; text-align: right }
+.post { position: relative }
+@media only screen and (max-width: 90em) {
+   .postdate::after, .read-more-link::after { content: ' | ' }
+}
+@media only screen and (min-width: 90.063em) {
+   .postinfo {
+      position: absolute;
+      left: -10rem;
+      top: 0;
+      width: 9rem;
+      text-align: right;
+   }
+   .postdate, .read-more-link { display: block; margin-bottom: 1rem }
+}
