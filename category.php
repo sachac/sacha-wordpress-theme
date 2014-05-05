@@ -58,11 +58,29 @@ if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
         <?php endwhile; ?>
 
         <div class="navigation">
-          <div class="left">
-            <?php next_posts_link('&laquo; Older posts'); ?>
-          </div><div class="right">	
-            <?php previous_posts_link('Newer posts &raquo;'); ?>
-          </div>
+    <?php if ($_REQUEST['order'] == 'asc') {
+      ?>
+      <span class="nav-left">
+      <?php previous_posts_link('&laquo; Older posts'); ?>
+      </span> 
+      - <span class="count">
+      <?php echo $wp_query->found_posts . ' total post(s)' ?>
+      </span><span class="nav-right">
+      <?php next_posts_link('Newer posts &raquo;'); ?>
+      </span>
+      <div style="clear: both"></div>
+      <?php } else {
+?>
+      <span class="nav-left">
+      <?php next_posts_link('&laquo; Older posts'); ?>
+      </span> - <span class="count">
+      <?php echo $wp_query->found_posts . ' total post(s)' ?>
+      </span><span class="nav-right">
+      <?php previous_posts_link('Newer posts &raquo;'); ?>
+      </span>
+    <div style="clear: both"></div>
+    <?php } // endif
+    ?>
       <div style="clear: both"></div>
         </div>
     <?php else: ?>

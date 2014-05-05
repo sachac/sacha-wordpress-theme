@@ -1,5 +1,4 @@
 <?php if ($_REQUEST['dump']) { 
-  remove_all_filters('the_content');
   while (have_posts()): the_post(); ?>
   <div class="post">
   <h2><?php the_title() ?></h2>
