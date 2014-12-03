@@ -27,6 +27,15 @@ function recordOutboundLink(link, category, action) {
     setTimeout('document.location = "' + link.href + '"', 100)
   }catch(err){}
 }
+$(document).ready(function() {
+    $(".toc-link").click(function(e) {
+        var evt = e ? e:window.event;
+        if ($($(this).attr('data-href')).length > 0 && !evt.ctrlKey) {
+          window.location.hash = $(this).attr('data-href');
+          return false;
+        }
+      });
+  });
 </script>
         <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" /> 
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/foundation/css/foundation.min.css" type="text/css" />
