@@ -35,7 +35,6 @@
 the_ratings(); } ?>
 
 
-<script src="http://feeds.feedburner.com/~s/sachac?i=<?php the_permalink() ?>" type="text/javascript" charset="utf-8"></script>
 				<?php link_pages('<p><strong>Pages:</strong>','</p>','number'); ?>
 
 				<p class="postmetadata">
@@ -44,6 +43,7 @@ the_ratings(); } ?>
 
 			</div>
 
+<?php DisplayPingTrackbacks(); ?>
 				<div class="comments-template">
 					<?php comments_template(); ?>
 				</div>
