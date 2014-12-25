@@ -25,6 +25,7 @@
 				<div class="postinfo">
 <?php _e('Posted on'); ?> <span class="postdate"><?php the_time('F jS, Y') ?></span> <?php _e('by'); ?> <?php the_author() ?><br />
 <?php _e('More posts about:'); ?> <?php the_category(', ') ?> <?php the_tags(); ?> <?php edit_post_link('Edit', ' &#124; ', ''); ?> // <strong><?php comments_popup_link('Add Comment &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></strong> 				
+
 				</div>
 
 			<div class="entry">
@@ -38,7 +39,14 @@ the_ratings(); } ?>
 				<?php link_pages('<p><strong>Pages:</strong>','</p>','number'); ?>
 
 				<p class="postmetadata">
-<?php _e('More posts about:'); ?> <?php the_category(', ') ?> <?php the_tags(); ?> <?php edit_post_link('Edit', ' &#124; ', ''); ?> // <strong><?php comments_popup_link('Add Comment &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></strong> 				
+<?php _e('More posts about:'); ?> <?php the_category(', ') ?> <?php the_tags(); ?> <?php edit_post_link('Edit', ' &#124; ', ''); ?> 
+<?php
+if (get_the_date('Y') >= '2008' && get_the_date('Y-m') < date('Y-m', time() - 60 * 60 * 24 * 7 * 2)) {
+  print ' | ';
+  print '<a href="http://pages.sachachua.com/sharing/blog.html?url=' . get_permalink() . '">See in index</a>';
+}
+?>
+ // <strong><?php comments_popup_link('Add Comment &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></strong> 				
 				</p>
 
 			</div>

@@ -22,6 +22,13 @@ the_ratings(); } ?>
                                                             &#187;',
                  '% Comments &#187;'); ?></strong>
 <?php _e('Read more about '); the_category(', '); ?> <?php the_tags(); ?> 
+<?php
+print '<!-- date: ' . get_the_date('Y-m') . ' ' . date('Y-m', time() - 60 * 60 * 24 * 7 * 2) . '-->';
+if (get_the_date('Y') >= '2008' && get_the_date('Y-m') < date('Y-m', time() - 60 * 60 * 24 * 7 * 2)) {
+  print ' | ';
+  print '<a href="http://pages.sachachua.com/sharing/blog.html?url=' . get_permalink() . '">See in index</a>';
+}
+?>
 <?php edit_post_link('Edit', ' &#124; ', ''); ?>
 				</p>
 

@@ -7,7 +7,7 @@
       <li><a id="resources" class="replace home-design" href="/blog/resources">Resources</a></li>
       <li><a id="index" class="replace show-for-medium-up home-design" href="/blog/index">Index</a></li>
       <li><a id="archives" class="replace home-design" href="/blog/archive/">Archives</a></li>
-      <li><a id="random" class="replace show-for-medium-up home-design" href="/blog/?random">Random</a></li>
+      <li><a id="random" class="replace show-for-medium-up home-design" href="/blog/random">Random</a></li>
       <li><a id="contact" class="replace home-design" href="/blog/contact">Contact</a></li>
       <li><?php get_search_form(true); ?></li>
     </ul>
