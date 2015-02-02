@@ -29,7 +29,7 @@
 $last_month = null;
 if ($_GET['bulk']) { 
   $posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=-1'); ?>
-  <html><head><link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" /><title><?php print $title ?></title><body>
+  <html <?php language_attributes(); ?>><head><link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" /><title><?php print $title ?></title><body>
     <div class="bulk">
     <h1 class="bulk_title"><?php print $title ?></h1>
     <?php if (have_posts()) {
@@ -49,13 +49,14 @@ if ($_GET['bulk']) {
         $last_month = get_the_time('F Y');
       }
       ?>
-
+<article>
              <h2 class="title" id="post-<?php the_ID(); ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <div class="permalink"><a href="<?php echo get_option('home'); ?>/p/<?php the_ID(); ?>"><?php echo get_option('home'); ?>/p/<?php the_ID(); ?></a></div>
-             <div class="date"><?php the_time('F j, Y') ?> - Categories: <?php the_category(', ') ?></div>
+                                                                                                                         <div class="permalink"><a href="<?php echo home_url() ?>/p/<?php the_ID(); ?>"><?php echo home_url() ?>/p/<?php the_ID(); ?></a></div>
+             <div class="date" data-date="<?php the_time('Y-m-d') ?>"><?php the_time('F j, Y') ?> - Categories: <?php the_category(', ') ?></div>
              <div class="body">
                 <?php the_content() ?>
              </div>
+</article>
     <?php }} ?>
     </div></body></html>
   <?php
@@ -70,7 +71,8 @@ else if ($_GET['org']) {
   $posts = query_posts($query_string . '&orderby=date&order=asc&posts_per_page=-1'); 
   print '<pre>';
   while(have_posts()) { the_post(); ?>
-- [[<?php the_permalink(); ?>][<?php the_title(); ?>]]
+- [[<?php the_permalink(); ?>][<?php the_title(); ?>]] <?php if (has_excerpt()) { print trim(get_the_excerpt()); } ?>
+
 <?php
   }
   print '</pre>';
@@ -138,7 +140,7 @@ else {
 
 		<div class="post" id="post-<?php the_ID(); ?>">
 
-			<h2><?php _e('Not Found'); ?></h2>
+			<h2><?php _e('Not Found', 'sacha'); ?></h2>
 
 		</div>
 

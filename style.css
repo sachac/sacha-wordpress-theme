@@ -4,7 +4,8 @@ Theme URI: http://www.sachachua.com
 Description: A new theme 
 Version: 1.0
 Author: Sacha Chua
-
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 /* =WordPress Core
@@ -1162,3 +1163,6 @@ code {
 
 dl.gallery-item { margin-left: 0 }
 td.center { text-align: center }
+.sticky { }
+.gallery-caption { } 
+.bypostauthor { }

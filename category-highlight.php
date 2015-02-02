@@ -31,7 +31,7 @@ while(have_posts()):the_post();
 $list = ''; $i = 0; ?>
     <tr><td><?php the_time('M j, Y') ?></td><td><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></td><td><?php $cat = get_the_category(false); foreach ($cat as $category) { if ($category->term_id != 678) {
 if (0 < $i) { $list .= ', '; } 
-  $list .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '" ' . $rel . '>' . $category->name.'</a>';
+  $list .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" , 'sacha'), $category->name ) ) . '" ' . $rel . '>' . $category->name.'</a>';
   $i++; } }
 print $list;
    ?></td></tr>
@@ -51,7 +51,7 @@ print $list;
 
 		<div class="post" id="post-<?php the_ID(); ?>">
 
-			<h2><?php _e('Not Found'); ?></h2>
+			<h2><?php _e('Not Found', 'sacha'); ?></h2>
 
 		</div>
 

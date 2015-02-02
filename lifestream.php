@@ -15,7 +15,7 @@
              }
             ?>
             </ul>
-				<?php link_pages('<p><strong>Pages:</strong>','</p>'); ?>
+				<?php wp_link_pages('<p><strong>Pages:</strong>','</p>'); ?>
 				<?php edit_post_link('Edit','<p>','</p>'); ?>
 			</div>
 
@@ -23,7 +23,7 @@
 <div style="clear: both"></div>
 	<?php else: ?>
 		<div class="page" id="page-<?php the_ID(); ?>">
-			<h2><?php _e('Not Found'); ?></h2>
+			<h2><?php _e('Not Found', 'sacha'); ?></h2>
 
 		</div>
 

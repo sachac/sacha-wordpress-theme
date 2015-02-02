@@ -122,3 +122,20 @@ function DisplayPingTrackbacks() {
         }
         echo "</ul></div>";
 }}
+
+function sacha_widgets_init() {
+  register_sidebar( array('name' => __( 'Sidebar 1', 'sacha' ),
+                          'id' => 'sidebar-1',
+                          'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'sacha' ),
+                          'before_title' => '<h1>',
+                          'after_title' => '</h1>',
+                          ) );
+  register_sidebar( array('name' => __( 'Sidebar 2', 'sacha' ),
+                          'id' => 'sidebar-2',
+                          'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'sacha' ),
+                          'before_title' => '<h1>',
+                          'after_title' => '</h1>',
+                          ) );
+
+}
+add_action('widgets_init', 'sacha_widgets_init');

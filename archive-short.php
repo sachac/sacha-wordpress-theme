@@ -26,7 +26,7 @@ else
 
 		<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a><br/>
 				<span class="postmetadata">
-<?php _e('Posted on'); ?> <span class="postdate"><?php the_time('F jS, Y') ?></span> 
+  <?php _e('Posted on', 'sacha'); ?> <span class="postdate"><?php the_time('F jS, Y') ?></span> 
 <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?> <?php edit_post_link('Edit', ' &#124; ', ''); ?></span><br/> <?php the_excerpt_reloaded(20, nil, nil, TRUE, '(more)'); ?> </li>
 			
 
@@ -40,7 +40,7 @@ else
 
 		<div class="post" id="post-<?php the_ID(); ?>">
 
-			<h2><?php _e('Not Found'); ?></h2>
+  <h2><?php _e('Not Found', 'sacha'); ?></h2>
 
 		</div>
 

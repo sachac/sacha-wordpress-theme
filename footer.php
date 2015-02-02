@@ -26,9 +26,9 @@ I'd love to hear your thoughts, questions, and suggestions!</p>
   <script>
     $(document).foundation();
     $("img#site-logo").hover(function() { 
-      $(this).attr("src", "<?php bloginfo('stylesheet_directory'); ?>/images/animated-logo.gif");
+      $(this).attr("src", "<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/images/animated-logo.gif");
     }, function() { 
-      $(this).attr("src", "<?php bloginfo('stylesheet_directory'); ?>/images/small-logo.png");
+      $(this).attr("src", "<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/images/small-logo.png");
     }); 
   </script>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>

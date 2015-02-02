@@ -5,7 +5,7 @@ Template Name: Sitemap
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html <?php language_attributes(); ?> xmlns="http://www.w3.org/1999/xhtml">
 
 <head profile="http://gmpg.org/xfn/11">
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
@@ -20,9 +20,9 @@ Template Name: Sitemap
 
 <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class( $class ); ?>>
 
-<h2><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h2>
+<h2><a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h2>
 
 <h2><?php the_title(); ?></h2>
 

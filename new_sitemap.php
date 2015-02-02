@@ -10,7 +10,7 @@ Template Name: New Sitemap
 
 	<?php if(have_posts()): ?><?php while(have_posts()):the_post(); ?>
 
-		<h2><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h2>
+		<h2><a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h2>
 
 <h2><?php the_title(); ?></h2>
 
@@ -52,7 +52,7 @@ Template Name: New Sitemap
 
 		<div class="post" id="post-<?php the_ID(); ?>">
 
-			<h2><?php _e('Not Found'); ?></h2>
+			<h2><?php _e('Not Found', 'sacha'); ?></h2>
 
 		</div>
 

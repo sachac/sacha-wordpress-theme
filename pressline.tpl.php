@@ -6,7 +6,7 @@ Template Name: PressLine
 //used for Plugin::PressLine
 ?>
 <?php get_header(); ?>
-<body onload="PressLineonLoad();">
+<body <?php body_class( $class ); ?> onload="PressLineonLoad();">
 
 <div id="content">
 <h3 class="storytitle"><?php bloginfo('name'); ?> &raquo; PressLine</h3>

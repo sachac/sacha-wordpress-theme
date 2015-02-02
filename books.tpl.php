@@ -13,7 +13,7 @@ get_header();
                                                             &#187;',
                  '% Comments &#187;'); ?></strong></div>
 				<?php the_content(); ?>
-				<?php link_pages('<p><strong>Pages:</strong>','</p>'); ?>
+				<?php wp_link_pages('<p><strong>Pages:</strong>','</p>'); ?>
 				<?php edit_post_link('Edit','<p>','</p>'); ?>
 			</div>
 
@@ -39,7 +39,7 @@ $my_query = new WP_Query('cat=40&posts_per_page=-1');
       foreach ($cat as $category) {
       if ($category->name != 'book') {
       if ($list) { $list .= ', '; } 
-      $list .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '" ' . $rel . '>' . $category->name.'</a>';
+      $list .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'sacha' ), $category->name ) ) . '" ' . $rel . '>' . $category->name.'</a>';
       $i++; }
       }
       print $list;

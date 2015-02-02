@@ -3,7 +3,7 @@
   <div class="post">
   <h2><?php the_title() ?></h2>
   <span class="date"><?php the_time('F jS, Y') ?></span>
-  <span class="perm">- <a class="permalink" href="<?php echo get_option('home'); ?>/p/<?php the_ID(); ?>"><?php echo get_option('home'); ?>/p/<?php the_ID(); ?></a></span>
+    <span class="perm">- <a class="permalink" href="<?php echo home_url() ?>/p/<?php the_ID(); ?>"><?php echo home_url() ?>/p/<?php the_ID(); ?></a></span>
   <div class="entry"><?php the_content() ?></div>
   </div>
 <?php 
@@ -23,8 +23,8 @@
 			<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 
 				<div class="postinfo">
-<?php _e('Posted on'); ?> <span class="postdate"><?php the_time('F jS, Y') ?></span> <?php _e('by'); ?> <?php the_author() ?><br />
-<?php _e('More posts about:'); ?> <?php the_category(', ') ?> <?php the_tags(); ?> <?php edit_post_link('Edit', ' &#124; ', ''); ?> // <strong><?php comments_popup_link('Add Comment &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></strong> 				
+  <?php _e('Posted on', 'sacha'); ?> <span class="postdate"><?php the_time('F jS, Y') ?></span> <?php _e('by', 'sacha'); ?> <?php the_author() ?><br />
+  <?php _e('More posts about:', 'sacha'); ?> <?php the_category(', ') ?> <?php the_tags(); ?> <?php edit_post_link('Edit', ' &#124; ', ''); ?> // <strong><?php comments_popup_link('Add Comment &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></strong> 				
 
 				</div>
 
@@ -36,10 +36,10 @@
 the_ratings(); } ?>
 
 
-				<?php link_pages('<p><strong>Pages:</strong>','</p>','number'); ?>
+				<?php wp_link_pages('<p><strong>Pages:</strong>','</p>','number'); ?>
 
 				<p class="postmetadata">
-<?php _e('More posts about:'); ?> <?php the_category(', ') ?> <?php the_tags(); ?> <?php edit_post_link('Edit', ' &#124; ', ''); ?> 
+  <?php _e('More posts about:', 'sacha'); ?> <?php the_category(', ') ?> <?php the_tags(); ?> <?php edit_post_link('Edit', ' &#124; ', ''); ?> 
 <?php
 if (get_the_date('Y') >= '2008' && get_the_date('Y-m') < date('Y-m', time() - 60 * 60 * 24 * 7 * 2)) {
   print ' | ';
@@ -73,7 +73,7 @@ if (get_the_date('Y') >= '2008' && get_the_date('Y-m') < date('Y-m', time() - 60
 
 		<div class="post" id="post-<?php the_ID(); ?>">
 
-			<h2><?php _e('Not Found'); ?></h2>
+  <h2><?php _e('Not Found', 'sacha'); ?></h2>
 
 		</div>
 

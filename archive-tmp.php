@@ -21,7 +21,7 @@
 
 			<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 			<div class="postinfo">
-<?php _e('Categories: '); the_category(', '); ?> <?php _e('Posted on'); ?> <span class="postdate"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:s\Z') ?>"><?php the_time('F jS, Y') ?></abbr></span> <?php _e('by'); ?> <?php the_author() ?> 
+<?php _e('Categories: ', 'sacha'); the_category(', '); ?> <?php _e('Posted on', 'sacha'); ?> <span class="postdate"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:s\Z') ?>"><?php the_time('F jS, Y') ?></abbr></span> <?php _e('by', 'sacha'); ?> <?php the_author() ?> 
 
 			</div>
 
@@ -32,7 +32,7 @@
 
 
 				<p class="postmetadata">
-<?php _e('Tags&#58;'); ?> <?php the_category(', ') ?> <?php _e('by'); ?> <?php  the_author(); ?><br />
+<?php _e('Tags&#58;', 'sacha'); ?> <?php the_category(', ') ?> <?php _e('by', 'sacha'); ?> <?php  the_author(); ?><br />
 <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?> <?php edit_post_link('Edit', ' &#124; ', ''); ?>
 				</p>
 
@@ -50,7 +50,7 @@
 
 		<div class="post" id="post-<?php the_ID(); ?>">
 
-			<h2><?php _e('Not Found'); ?></h2>
+			<h2><?php _e('Not Found', 'sacha'); ?></h2>
 
 		</div>
 

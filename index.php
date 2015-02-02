@@ -36,7 +36,7 @@ if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
         <div style="clear: both"></div>
       </div>
     <?php else: ?>
-      <h2><?php _e('Couldn\'t find it... Sorry!'); ?></h2>
+      <h2><?php _e('Couldn\'t find it... Sorry!', 'sacha'); ?></h2>
     <?php endif; ?>
     </div><!--hfeed-->
   </div><!--content-->

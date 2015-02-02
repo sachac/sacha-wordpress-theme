@@ -83,7 +83,7 @@ if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
         </div>
     <?php else: ?>
       <div class="post" id="post-<?php the_ID(); ?>">
-      <h2><?php _e('Not Found', 'sacha'); ?></h2>
+               <h2><?php _e('Not Found', 'sacha'); ?></h2>
       </div>
     <?php endif; ?>
    </div>

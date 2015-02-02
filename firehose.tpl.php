@@ -37,7 +37,7 @@ while(have_posts()) {
   } else {
   ?>
   <li><a href="<?php the_permalink(); ?>" title="<?php the_time('l, F j, Y') ?>" class="entry-title"><?php the_time('l, F j, Y') ?></a></li>
-<? }
+<?php }
       }?>
       <a href="http://sachachua.com/wp/daily">Other daily plans</a>...
 </div>
@@ -49,7 +49,7 @@ $posts = query_posts('orderby=date&order=desc&posts_per_page=5&cat=5');
 while(have_posts()) {
   the_post(); ?>
       <li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="entry-title"><?php the_title(); ?></a></li>
-<? } ?>
+<?php } ?>
 	  </ul>
 <a href="http://sachachua.com/wp/category/weekly">Other weekly reviews</a>...
 </div>

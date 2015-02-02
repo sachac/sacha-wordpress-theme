@@ -7,9 +7,9 @@ Template Name: Post Stats
 ?>
 <?php get_header(); 
 ?>
-<body>
+<body <?php body_class( $class ); ?>>
 
 <div id="content">
-<? tdwordcount_stats() ?>
+<?php tdwordcount_stats() ?>
 </div>
 <?php get_footer(); ?>
