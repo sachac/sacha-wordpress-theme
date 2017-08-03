@@ -139,3 +139,21 @@ function sacha_widgets_init() {
 
 }
 add_action('widgets_init', 'sacha_widgets_init');
+
+
+function sacha_tweak_query() {
+    set_query_var('date_query', array('column' => 'post_date',
+                                      'before' => $_REQUEST['before'], 
+                                      'after' => $_REQUEST['after'], 'inclusive' => true));
+    if ($_REQUEST['exclude_cat']) {
+        set_query_var('tax_query', array(array('taxonomy' => 'category', 'field' => 'slug', 'terms' => $_REQUEST['exclude_cat'], 'operator' => 'NOT IN')));
+    }
+    if ($_REQUEST['exclude_tag']) {
+        set_query_var('tax_query', array(array('taxonomy' => 'tag', 'field' => 'slug', 'terms' => $_REQUEST['exclude_tag'], 'operator' => 'NOT IN')));
+    }
+    if ($_REQUEST['bulk']) {
+        set_query_var('posts_per_page', -1);
+    }
+}
+
+add_action('pre_get_posts', 'sacha_tweak_query');
