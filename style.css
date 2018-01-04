@@ -1169,3 +1169,9 @@ td.center { text-align: center }
 .sticky { }
 .gallery-caption { } 
 .bypostauthor { }
+
+
+.bulk .top-menu { display: none }
+.bulk .header { display: none }
+.bulk .rightbar { display: none }
+.bulk .footer { display: none }

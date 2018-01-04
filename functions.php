@@ -157,3 +157,12 @@ function sacha_tweak_query() {
 }
 
 add_action('pre_get_posts', 'sacha_tweak_query');
+
+function sacha_body_class($classes) {
+  if ($_REQUEST['bulk']) {
+    $classes[] = 'bulk';
+  }
+  return $classes;
+}
+add_filter('body_class', 'sacha_body_class');
+

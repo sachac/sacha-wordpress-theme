@@ -2,11 +2,9 @@
 <?php
 if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
   global $query_string;
-  query_posts($query_string . '&posts_per_page=' . $_REQUEST['posts']);
-# } else {
-# query_posts($query_string . '&posts_per_page=3');
-} ?>
-
+  set_query_var('posts_per_page', $_REQUEST['posts']);
+}
+?>
 <div class="content columns small-12 large-8">
   <div id="cse" style="width:100%;"></div>
   <div class="navigation">
