@@ -39,7 +39,7 @@ while(have_posts()) {
   <li><a href="<?php the_permalink(); ?>" title="<?php the_time('l, F j, Y') ?>" class="entry-title"><?php the_time('l, F j, Y') ?></a></li>
 <?php }
       }?>
-      <a href="http://sachachua.com/wp/daily">Other daily plans</a>...
+      <a href="/blog/daily">Other daily plans</a>...
 </div>
 <div class="weekly">
 <h2>Weekly</h2>
@@ -51,7 +51,7 @@ while(have_posts()) {
       <li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="entry-title"><?php the_title(); ?></a></li>
 <?php } ?>
 	  </ul>
-<a href="http://sachachua.com/wp/category/weekly">Other weekly reviews</a>...
+<a href="/blog/category/weekly">Other weekly reviews</a>...
 </div>
 	  	  <div class="clear"></div>
 	  </div>

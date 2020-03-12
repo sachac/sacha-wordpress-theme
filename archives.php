@@ -12,7 +12,7 @@ Template Name: Archives
 <div class="small-6 large-4 columns">
   <h2>Tags</h2>
   <?php wp_tag_cloud('smallest=8&largest=22&exclude=678&number=100') ?>
-  <p><a href="http://sachachua.com/blog/tag/highlight">Highlighted posts</a></p>
+  <p><a href="/blog/tag/highlight">Highlighted posts</a></p>
 </div>
 <div class="small-6 large-4 columns">
   <h2>Archives by month</h2>

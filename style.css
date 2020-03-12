@@ -264,6 +264,7 @@ textarea#comment {
 	clear: none !important; 
 }
 
+.entry p { margin-bottom: 1.5em }
 .archive_head { 
 	text-align: center;
 	font-style: normal; 

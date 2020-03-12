@@ -1,7 +1,7 @@
 <?php get_header(); ?>
  <div class="content columns large-8 small-12">
      <h2 class="center">Sorry! Page not found.</h2> 
-Please <a href="http://sachachua.com/blog/contact">tell me what you're looking for,</a> or try searching:
+Please <a href="/blog/contact">tell me what you're looking for,</a> or try searching:
 
 <form method="get" action="<?php echo esc_url( home_url() ) ?>">
 <fieldset>

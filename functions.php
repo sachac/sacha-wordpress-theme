@@ -1,4 +1,5 @@
 <?php
+remove_action('template_redirect', 'redirect_canonical');
 if ( function_exists('register_sidebar') )
   register_sidebars(2);
 
@@ -52,7 +53,7 @@ function random_template() {
 
 function modify_url($mod) 
 { 
-    $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; 
+    $url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; 
     $query = explode("&", $_SERVER['QUERY_STRING']);
     if (!$_SERVER['QUERY_STRING']) {$queryStart = "?";} else {$queryStart = "&";}
     // modify/delete data 
@@ -165,4 +166,5 @@ function sacha_body_class($classes) {
   return $classes;
 }
 add_filter('body_class', 'sacha_body_class');
+// remove_filter( 'the_content', 'wpautop' );
 

@@ -7,15 +7,15 @@ get_header();
 <div class="hfeed large-12 columns">
 <h3>Future topics</h3>
 
-I'm trying out <a href="http://sachachua.com/wp/2009/12/the-value-of-a-bottleneck/">limiting my blog to one post a day</a>, published between
+I'm trying out <a href="/blog/2009/12/the-value-of-a-bottleneck/">limiting my blog to one post a day</a>, published between
 8:00 AM to 9:00 AM ET. This usually results in a backlog of posts
 I've already written and a long list of posts I'd like to write.
 
 Here are the upcoming posts. This queue may change a lot depending on
 what else happens, but it'll give you an idea of what else I'm
 planning to write about. If you see something you're interested in, <a
-href="http://sachachua.com/wp/contact">contact me</a> or <a
-href="http://twitter.com/sachac">send me a message on Twitter</a> and
+href="/blog/contact">contact me</a> or <a
+href="https://twitter.com/sachac">send me a message on Twitter</a> and
 I'll see about nudging it forward in the queue.
 
 <?php
