@@ -44,7 +44,7 @@ if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
     <?php if(have_posts()): ?>
       <div class="on-this-page">On this page:<ul>
         <?php while(have_posts()):the_post(); ?>
-        <li><a href="#post-<?php the_ID(); ?>" title="<?php the_title(); ?>" class="entry-summary-title"><?php the_title(); ?></a></li>
+        <li><a href="<?php the_permalink(); ?>" class="toc-link" data-href="#post-<?php the_ID(); ?>" title="<?php the_title(); ?>" class="entry-summary-title"><?php the_title(); ?></a></li>
         <?php endwhile; rewind_posts(); ?>
       </ul></div>
       <?php while(have_posts()):the_post();

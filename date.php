@@ -38,7 +38,7 @@ if ($_GET['bulk']) {
     <ul>
     <?php
              while(have_posts()) { the_post(); ?>
-    <li><a href="#post-<?php the_ID(); ?>"><?php the_title(); ?></a></li>
+<li><a href="<?php the_permalink(); ?>" class="toc-link" data-href="#post-<?php the_ID(); ?>" title="<?php the_title(); ?>" class="entry-summary-title"><?php the_title(); ?></a></li>
              <?php } ?>
     </ul>
     <?php 
