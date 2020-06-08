@@ -40,7 +40,7 @@ $(document).ready(function() {
         <link rel="stylesheet" href="//www.google.com/cse/style/look/default.css" type="text/css" /> 
         <link rel="stylesheet" href="<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/foundation/css/foundation.min.css" type="text/css" />
         <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=20200606" type="text/css" media="screen" />
 	<!--[if lte IE 6]>
 	<link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ) ?>/ie6.css" media="screen" />
 	<![endif]-->
