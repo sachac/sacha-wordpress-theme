@@ -2,7 +2,7 @@
 Theme Name: Sacha Chua
 Theme URI: http://www.sachachua.com
 Description: A new theme 
-Version: 1.1
+Version: 1.2
 Author: Sacha Chua
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1163,6 +1163,11 @@ code {
                 font-weight: normal;
                 padding: 0 0.2em;
 }
+pre code {
+    font-size: 0.7rem;
+    border: none;
+    padding: 0
+}
 
 dl.gallery-item { margin-left: 0 }
 td.center { text-align: center }
@@ -1177,11 +1182,11 @@ td.center { text-align: center }
 .bulk .footer { display: none }
 
 @font-face {
-    font-family: 'sachacHand';
-    src: url('sachacHand.woff?v=20200606');
+    font-family: 'sachacHand-Regular';
+    src: url('sachacHand-Regular.woff');
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'sachacHand',"Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
-    font-weight: bold;
+    font-family: 'sachacHand-Regular',"Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    font-weight: normal;
 }

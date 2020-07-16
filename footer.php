@@ -18,7 +18,7 @@ I'd love to hear your thoughts, questions, and suggestions!</p>
 
 
   <p>
-    Copyright &#169; 2001-2020 Sacha Chua (<a href="mailto:sacha@sachachua.com">sacha@sachachua.com</a>). Please feel free to reuse or share content under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution</a> license unless otherwise noted. You can generally click on images for larger versions. Thanks for reading!
+    Copyright &#169; 2001-2020 Sacha Chua (<a href="mailto:sacha@sachachua.com">sacha@sachachua.com</a>). Please feel free to reuse or share content under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</a> license unless otherwise noted. You can generally click on images for larger versions. Thanks for reading!
   </p>
 </div>
 
