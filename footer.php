@@ -26,6 +26,15 @@ I'd love to hear your thoughts, questions, and suggestions!</p>
  var urlParams = new URLSearchParams(window.location.search);
  if (urlParams && urlParams.has('new-window')) {
    $('.entry-content a').attr('target', '_blank');
+   // https://css-tricks.com/snippets/jquery/find-all-internal-links/
+   var siteURL = window.location.protocol + '//' + top.location.host.toString();
+   var $internalLinks = $("a[href^='"+siteURL+"'], a[href^='/'], a[href^='./'], a[href^='../'], a[href^='#']");
+   $internalLinks.each(function() {
+     var href = $(this).attr('href');
+     if (href) {
+       $(this).attr('href', href + (href.match('\\?') ? '&' : '?') + 'new-window=' + urlParams.get('new-window'));
+     }
+   });
  }
  
  $("img#site-logo").hover(function() { 
