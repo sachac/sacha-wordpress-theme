@@ -22,13 +22,18 @@ I'd love to hear your thoughts, questions, and suggestions!</p>
   </p>
 </div>
 
-  <script>
-        $("img#site-logo").hover(function() { 
-      $(this).attr("src", "<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/images/animated-logo.gif");
-    }, function() { 
-      $(this).attr("src", "<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/images/small-logo.png");
-    }); 
-  </script>
+<script>
+ var urlParams = new URLSearchParams(window.location.search);
+ if (urlParams && urlParams.has('new-window')) {
+   $('.entry-content a').attr('target', '_blank');
+ }
+ 
+ $("img#site-logo").hover(function() { 
+   $(this).attr("src", "<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/images/animated-logo.gif");
+ }, function() { 
+   $(this).attr("src", "<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/images/small-logo.png");
+ }); 
+</script>
 
 <?php wp_footer(); ?>
 </div>
