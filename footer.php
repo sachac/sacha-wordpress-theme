@@ -25,7 +25,7 @@ I'd love to hear your thoughts, questions, and suggestions!</p>
 <script>
  var urlParams = new URLSearchParams(window.location.search);
  if (urlParams && urlParams.has('new-window')) {
-   $('.entry-content a').attr('target', '_blank');
+   $('.entry a, .entry-content a').attr('target', '_blank');
    // https://css-tricks.com/snippets/jquery/find-all-internal-links/
    var siteURL = window.location.protocol + '//' + top.location.host.toString();
    var $internalLinks = $("a[href^='"+siteURL+"'], a[href^='/'], a[href^='./'], a[href^='../'], a[href^='#']");
