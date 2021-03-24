@@ -168,3 +168,38 @@ function sacha_body_class($classes) {
 add_filter('body_class', 'sacha_body_class');
 // remove_filter( 'the_content', 'wpautop' );
 
+// https://www.denisbouquet.com/remove-wordpress-emoji-code/
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
+remove_action('wp_head', 'OTDAddJS');
+
+/**
+ * This creates the [my_cat_list] shortcode and calls the
+ * my_list_categories_shortcode() function.
+ */
+add_shortcode( 'my_cat_list', 'my_list_categories_shortcode' );
+add_shortcode( 'my_search_form', 'my_search_form_shortcode' );
+
+/**
+ * this function outputs your category list where you
+ * use the [my_cat_list] shortcode.
+ */
+function my_list_categories_shortcode() {
+    $args = array( 'echo'=>false, 'show_count' => true );
+    return wp_list_categories( $args ); 
+}
+
+function my_search_form_shortcode( $form ) {
+ 
+    $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
+    <div><label class="screen-reader-text" for="s">' . __('Search for:') . '</label>
+    <input type="text" value="' . get_search_query() . '" name="s" id="s" style="width: 300px" />
+    <input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />
+    </div>
+    </form>';
+ 
+    return $form;
+}

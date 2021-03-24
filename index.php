@@ -6,7 +6,7 @@ if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
 # } else {
 # query_posts($query_string . '&posts_per_page=3'); 
 } ?>
-  <div class="content small-12 large-8 columns">
+  <div class="content small-12 large-12 columns">
     <div id="cse" style="width:100%;"></div>
     <div class="hfeed">
       <?php if ( is_search() ) { 
@@ -40,7 +40,5 @@ if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
     <?php endif; ?>
     </div><!--hfeed-->
   </div><!--content-->
-
-<?php get_sidebar(); ?>
 <?php get_footer() ?>
 

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="large-8 columns content">
+<div class="large-12 columns content">
 <div id="cse" style="width:100%;"></div>
     <div class="hfeed">
   <?php if(have_posts()): ?>
@@ -27,5 +27,4 @@
 	<?php endif; ?>
 </div>
 </div>
-<?php get_sidebar(); ?>
 <?php get_footer() ?>

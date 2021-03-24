@@ -2,14 +2,16 @@
 <div class="sticky contain-to-grid top-menu">
   <nav class="top-bar">
     <ul class="links">
-      <li><a id="home" class="replace home-design" href="/">Home</a></li>
-      <li><a id="about" class="replace home-design" href="/blog/about/">About</a></li>
-      <li><a id="resources" class="replace home-design" href="/blog/resources">Resources</a></li>
-      <li><a id="index" class="replace show-for-medium-up home-design" href="/blog/index">Index</a></li>
-      <li><a id="archives" class="replace home-design" href="/blog/archive/">Archives</a></li>
-      <li><a id="random" class="replace show-for-medium-up home-design" href="/blog/random">Random</a></li>
-      <li><a id="contact" class="replace home-design" href="/blog/contact">Contact</a></li>
-      <li><?php get_search_form(true); ?></li>
+      <li><a id="home" href="/">Home</a></li>
+      <li><a id="about" href="/blog/about/">About</a></li>
+      <li><a id="resources" href="/blog/resources">Resources</a></li>
+      <li><a id="index" href="/blog/index">Index</a></li>
+      <li><a id="archives" href="/blog/archive/">Archives</a></li>
+      <li><a id="random" href="/blog/random">Random</a></li>
+      <li><a href="#footer">Footer</a></li>
+      <li><a href="/blog/contact/">Contact</a></li>
+      <li><a href="/blog/search/">Search</a></li>
+      <li><span class="wp-night-mode"></span> Night mode</li>
     </ul>
   </nav>
 </div>

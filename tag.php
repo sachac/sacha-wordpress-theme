@@ -7,7 +7,7 @@ if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
 # query_posts($query_string . '&posts_per_page=3');
 } ?>
 
-<div class="content columns small-12 large-8">
+<div class="content columns small-12 large-12">
   <div id="cse" style="width:100%;"></div>
   <div class="navigation">
     <?php if ($_REQUEST['order'] == 'asc') {
@@ -88,6 +88,5 @@ if ($_REQUEST['posts'] && is_numeric($_REQUEST['posts'])) {
     <?php endif; ?>
    </div>
 </div>
-<?php get_sidebar(); ?>
 <?php get_footer() ?>
 

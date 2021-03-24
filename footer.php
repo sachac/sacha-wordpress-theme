@@ -1,5 +1,5 @@
 </div>
-<footer class="row footer">
+<footer class="row footer" id="footer">
 <div class="small-12 columns">
 
   <p>Like this? <a href="/blog/subscribe/">
@@ -11,6 +11,7 @@ I'd love to hear your thoughts, questions, and suggestions!</p>
     <li><a href="/blog/about/">About</a></li>
     <li><a href="/blog/index">Index</a></li>
     <li><a href="/blog/archive/">Archives</a></li>
+    <li><a href="/blog/category/">Categories</a></li>
     <li><a href="/blog/?random">Random</a></li>
     <li><a href="/blog/privacy">Privacy</a>
     <li><a href="/blog/contact">Contact</a>
@@ -18,7 +19,7 @@ I'd love to hear your thoughts, questions, and suggestions!</p>
 
 
   <p>
-    Copyright &#169; 2001-2020 Sacha Chua (<a href="mailto:sacha@sachachua.com">sacha@sachachua.com</a>). Emacs code snippets are generally under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3+</a>. Please feel free to reuse or share content under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</a> license unless otherwise noted. You can generally click on images for larger versions. Thanks for reading!
+    Copyright &#169; 2001-2021 Sacha Chua (<a href="mailto:sacha@sachachua.com">sacha@sachachua.com</a>). Emacs code snippets are generally under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3+</a>. Please feel free to reuse or share content under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</a> license unless otherwise noted. You can generally click on images for larger versions. Thanks for reading!
   </p>
 </div>
 

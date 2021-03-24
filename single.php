@@ -11,10 +11,11 @@
   exit;
 } ?>
 <?php get_header(); ?> 
-<div class="small-12 large-8 content columns">
+<div class="small-12 large-12 content columns">
 <div id="cse" style="width:100%;"></div>
-		<div class="navigation">
-			<?php previous_post_link('&laquo; Older: %link') ?><br /><?php next_post_link('Newer: %link &raquo;') ?>
+		<div class="navigation row">
+    <div class="older small-12 large-6 columns"><?php previous_post_link('&laquo; Older: %link') ?></div>
+    <div class="newer small-12 large-6 columns"><?php next_post_link( 'Newer: %link &raquo;') ?></div>
 		</div>
 	<?php if(have_posts()): ?><?php while(have_posts()):the_post(); ?>
 
@@ -60,14 +61,16 @@ if (get_the_date('Y') >= '2008' && get_the_date('Y-m') < date('Y-m', time() - 60
 
 	<?php endwhile; ?>
 
-		<div class="navigation">
-			<?php previous_post_link('&laquo; Older: %link') ?><br /><?php next_post_link('Newer: %link &raquo;') ?>
+		<div class="navigation row">
+    <div class="older small-12 large-6 columns"><?php previous_post_link('&laquo; Older: %link') ?></div>
+    <div class="newer small-12 large-6 columns"><?php next_post_link( 'Newer: %link &raquo;') ?></div>
+		</div>
 
 <?php if (function_exists('similar_posts')) { ?>
 			<h2>Related posts</h2>
 <?php similar_posts(); ?>
 <?php } ?>
-</div>
+
 
 	<?php else: ?>
 
@@ -79,8 +82,6 @@ if (get_the_date('Y') >= '2008' && get_the_date('Y-m') < date('Y-m', time() - 60
 
 	<?php endif; ?>
 </div>
-<?php get_sidebar(); ?>
-
 <?php get_footer() ?>
 
 </div></body>

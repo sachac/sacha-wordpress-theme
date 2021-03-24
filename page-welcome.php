@@ -2,7 +2,7 @@
 /* Template Name: Welcome page */
 include('base-header.php'); ?>
 <div class="row">
-<div class="large-8 columns content">
+<div class="large-12 columns content">
 <div id="cse" style="width:100%;"></div>
     <div class="hfeed">
     <?php if(have_posts()): ?>
@@ -32,5 +32,4 @@ include('base-header.php'); ?>
 
 </div><!--hfeed-->
 </div><!--content-->
-<?php get_sidebar() ?>
 <?php get_footer() ?>
